@@ -1,0 +1,24 @@
+@use 'colors' as *
+@use 'typographie' as *
+@use 'mixins' as *
+
+body
+    background-color: $deepBlack
+
+h1
+    @include header_font(6rem)
+h2
+    @include header_font(4rem)
+h3
+    @include header_font(3rem)
+
+p
+    @include text_font()
+
+a
+    @include text_font()
+
+menu
+    &__list
+        list-style: none
+

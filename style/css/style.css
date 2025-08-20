@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "orbitron";
+  src: url("../../fonts/Orbitron.ttf");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../fonts/RobotoMono-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "roboto-italic";
+  src: url("../../fonts/RobotoMono-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+body {
+  background-color: #0d0d0d;
+}
+
+h1 {
+  font: 6rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+}
+
+h2 {
+  font: 4rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+}
+
+h3 {
+  font: 3rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+}
+
+p {
+  font: 1.2rem "roboto";
+  color: #a9a6a6;
+}
+
+a {
+  font: 1.2rem "roboto";
+  color: #a9a6a6;
+}
+
+menu__list {
+  list-style: none;
+}
+
+.presentation__texte--emphase {
+  font-family: "roboto-italic";
+  color: #00cdcd;
+  text-shadow: 0 0 5px #00fcfc;
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

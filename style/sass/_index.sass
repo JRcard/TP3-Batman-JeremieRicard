@@ -1,0 +1,9 @@
+@use 'colors' as *
+@use 'typographie' as *
+@use 'mixins' as *
+
+.presentation
+    &__texte
+        &--emphase
+            font-family: $robotoMono-italic
+            @include glow-effect($darkTurquoise, $cyan)

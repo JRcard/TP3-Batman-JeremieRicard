@@ -1,0 +1,16 @@
+@use 'colors' as *
+@use 'typographie' as *
+    
+@mixin header_font($size)
+    font: $size $orbiton
+    color: $darkTurquoise
+    line-height: 1
+
+@mixin text_font()
+    font: 1.2rem $robotoMono
+    color: $brightGray
+
+@mixin glow-effect($color, $shadow) 
+  color: $color
+  text-shadow: 0 0 5px $shadow
+  transition: all 0.3s ease-in-out

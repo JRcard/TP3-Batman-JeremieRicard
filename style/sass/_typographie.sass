@@ -1,0 +1,14 @@
+$orbiton: "orbitron"
+$robotoMono: "roboto"
+$robotoMono-italic: "roboto-italic"
+
+$font-url:("orbitron":"../../fonts/Orbitron.ttf", "roboto": "../../fonts/RobotoMono-VariableFont_wght.ttf", "roboto-italic": "../../fonts/RobotoMono-Italic-VariableFont_wght.ttf")
+
+@each $name, $url in $font-url
+  @font-face
+    font-family: "#{$name}"
+    src: url($url) 
+
+    @if $name == "roboto-italic"
+      font-style: italic
+

@@ -43,6 +43,11 @@ a {
   color: #a9a6a6;
 }
 
+.divider {
+  height: 2px;
+  background-color: #007e80;
+}
+
 menu__list {
   list-style: none;
 }
@@ -51,5 +56,14 @@ menu__list {
   font-family: "roboto-italic";
   color: #00cdcd;
   text-shadow: 0 0 5px #00fcfc;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-out;
+}
+
+.identite__champ {
+  font: 2rem "roboto";
+  color: #00fcfc;
+}
+.identite__texte {
+  font: 1.5rem "roboto";
+  color: #a9a6a6;
 }/*# sourceMappingURL=style.css.map */

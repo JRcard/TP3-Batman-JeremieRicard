@@ -13,11 +13,14 @@ h3
     @include header_font(3rem)
 
 p
-    @include text_font()
+    @include text_font(1.2rem, $brightGray)
 
 a
-    @include text_font()
+    @include text_font(1.2rem, $brightGray)
 
+.divider    
+    height: 2px
+    background-color: $teal
 menu
     &__list
         list-style: none

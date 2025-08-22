@@ -99,4 +99,10 @@ menu__list {
   border: 2px solid #00fcfc;
   padding: 15px;
   border-radius: 0px 25px;
+}
+
+.audio-player__time {
+  font: 1.2rem "roboto";
+  color: #a9a6a6;
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */

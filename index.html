@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/media-chrome@4/+esm"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
@@ -29,9 +30,9 @@
     </header>
     <main>
         <section class="presentation mb-15">
-            <h2 class="presentation__titre text-right my-10">Entrée #001 - Présentation</h2>
+            <h2 class="presentation__titre text-right mb-10 mt-20">Entrée #001 - Présentation</h2>
             <div class="w-[80%] mx-auto grid grid-cols-12">
-                <div class="col-span-6 my-auto">
+                <div class="col-span-6 flex flex-col justify-center">
                     <p class="presentation__texte">Je suis né dans le chaos.</p>
                     <p>Pas celui qu’on montre aux infos. Le vrai.</p>
                     <p>Celui qui ronge les fondations, silencieusement.</p>
@@ -56,18 +57,19 @@
                     <p>Je suis ce que Gotham refuse d’admettre qu’elle a besoin.</p>
                     <p class="pb-10">Je suis...</p>
 
+                    <h2 class="pb-15">BATMAN</h2>
+
                 </div>
-                <div class="col-span-6 mt-20 mb-10"><img class="w-[60%] rounded-xl ml-auto" src="images/Batman.jpg"
+                <div class="col-span-6 my-[100px]"><img class="w-[60%] rounded-xl ml-auto" src="images/Batman.jpg"
                         alt="">
                 </div>
             </div>
-            <h2 class="text-center pb-15">BATMAN</h2>
             <div class="divider"></div>
         </section>
         <section class="mb-15">
-            <h2 class="identite__titre text-right">Entrée #002 - Identité masqué</h2>
+            <h2 class="identite__titre text-right mb-10 mt-20">Entrée #002 - Identité masqué</h2>
             <div class="grid grid-cols-12 py-15">
-                <div class="col-span-7">
+                <div class="col-span-7 flex flex-col justify-center">
                     <div class="identite__list flex pb-5">
                         <h3 class="identite__champ pr-3">Alias détectés :</h3>
                         <ul>
@@ -114,20 +116,42 @@
                         <p class="identite__texte">[REDACTED]</p>
                     </div>
                 </div>
-                <div class="col-span-5 flex ">
+                <div class="col-span-5 flex flex-col justify-center">
                     <img class="" src="images/logo-batman-teal.png">
                 </div>
             </div>
             <div class="divider"></div>
         </section>
         <section class="mb-15">
-            <h2 class="journal__titre text-right">Entrée #003 - Journal audio</h2>
+            <h2 class="journal__titre text-right  mb-10 mt-20">Entrée #003 - Journal audio</h2>
             <div class="grid grid-cols-12 gap-8 py-15">
                 <div class="journal__carte col-span-4">
-                    <h3 class="py-3">Rapport #003-A</h3>
-                    <h4 class="pb-3">La nuit du Joker</h4>
-                    <p class="pb-3">Durée: <span class="italic">00:52</span></p>
-                    <button class="bouton">Écouter</button>
+
+                    <media-controller class="bg-transparent" audio>
+                        <audio id="audio_player" slot="media"
+                            src="https://stream.mux.com/O4h5z00885HEucNNa1rV02wZapcGp01FXXoJd35AHmGX7g/audio.m4a"
+                            crossorigin></audio>
+                        <h3 class="py-3">Rapport #003-A</h3>
+                        <h4 class="pb-3">La nuit du Joker</h4>
+                        <p class="pb-3">Durée: <media-time-display class="audio-player__time italic"
+                                showduration></media-time-display></p>
+                        <media-seek-backward-button class="bouton">
+                            <svg slot="icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M11 8L5 12L11 16V8Z M19 8L13 12L19 16V8Z" fill="teal" />
+                                <use href="#backward" />
+                            </svg>
+                        </media-seek-backward-button>
+                        <media-play-button class="bouton">
+                            <svg slot="play" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M6 21 L21 12 L6 3 V21 Z" fill="teal" />
+                                <use href="#play" />
+                            </svg>
+                            <svg slot="pause" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M6 20h4V4H6v16Zm8-16v16h4V4h-4Z" fill="teal"></path>
+                                <use href="#pause" />
+                            </svg></media-play-button>
+
+                    </media-controller>
                     <p>**Texte à enregistrer** : “Il a pris Tim. Une virée en voiture. Une balade sanglante.
                         Le Joker ne tue pas pour le plaisir. Il tue pour le chaos.
                         Je suis arrivé trop tard. Pas pour sauver les victimes.
@@ -136,10 +160,31 @@
 
                 </div>
                 <div class="journal__carte col-span-4">
-                    <h3 class="py-3">Rapport #003-B</h3>
-                    <h4 class="pb-3">Le Pacte de Gordon</h4>
-                    <p class="pb-3">Durée: <span class="italic">01:08</span></p>
-                    <button class="bouton">Écouter</button>
+                    <media-controller class="bg-transparent" audio>
+                        <audio id="audio_player" slot="media"
+                            src="https://stream.mux.com/O4h5z00885HEucNNa1rV02wZapcGp01FXXoJd35AHmGX7g/audio.m4a"
+                            crossorigin></audio>
+                        <h3 class="py-3">Rapport #003-B</h3>
+                        <h4 class="pb-3">Le Pacte de Gordon</h4>
+                        <p class="pb-3">Durée: <media-time-display class="audio-player__time italic"
+                                showduration></media-time-display></p>
+                        <media-seek-backward-button class="bouton">
+                            <svg slot="icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M11 8L5 12L11 16V8Z M19 8L13 12L19 16V8Z" fill="teal" />
+                                <use href="#backward" />
+                            </svg>
+                        </media-seek-backward-button>
+                        <media-play-button class="bouton">
+                            <svg slot="play" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M6 21 L21 12 L6 3 V21 Z" fill="teal" />
+                                <use href="#play" />
+                            </svg>
+                            <svg slot="pause" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M6 20h4V4H6v16Zm8-16v16h4V4h-4Z" fill="teal"></path>
+                                <use href="#pause" />
+                            </svg></media-play-button>
+
+                    </media-controller>
                     <p>**Texte à enregistrer** : “Jim a pris sa retraite.
                         Il dit que Gotham n’a plus besoin de lui.
                         Il sait que c’est faux.
@@ -149,10 +194,31 @@
 
                 </div>
                 <div class="journal__carte col-span-4">
-                    <h3 class="py-3">Rapport #003-C</h3>
-                    <h4 class="pb-3">L’Opération Silence</h4>
-                    <p class="pb-3">Durée: <span class="italic">00:47</span></p>
-                    <button class="bouton">Écouter</button>
+                    <media-controller class="bg-transparent" audio>
+                        <audio id="audio_player" slot="media"
+                            src="https://stream.mux.com/O4h5z00885HEucNNa1rV02wZapcGp01FXXoJd35AHmGX7g/audio.m4a"
+                            crossorigin></audio>
+                        <h3 class="py-3">Rapport #003-C</h3>
+                        <h4 class="pb-3">L’Opération Silence</h4>
+                        <p class="pb-3">Durée: <media-time-display class="audio-player__time italic"
+                                showduration></media-time-display></p>
+                        <media-seek-backward-button class="bouton">
+                            <svg slot="icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M11 8L5 12L11 16V8Z M19 8L13 12L19 16V8Z" fill="teal" />
+                                <use href="#backward" />
+                            </svg>
+                        </media-seek-backward-button>
+                        <media-play-button class="bouton">
+                            <svg slot="play" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M6 21 L21 12 L6 3 V21 Z" fill="teal" />
+                                <use href="#play" />
+                            </svg>
+                            <svg slot="pause" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M6 20h4V4H6v16Zm8-16v16h4V4h-4Z" fill="teal"></path>
+                                <use href="#pause" />
+                            </svg></media-play-button>
+
+                    </media-controller>
                     <p>**Texte à enregistrer** : “Gotham est coupée du monde.
                         Les ponts ont sauté. Les lois aussi.
                         Je patrouille sans lumière. Sans bruit.
@@ -163,25 +229,17 @@
                 </div>
 
             </div>
-            <div>
-                <h4>Lecteur audio</h4>
-                <p>********************************</p>
-                <p>* * * * * * * * * * * * * * * * </p>
-                <p>* * * * * * * * * * * * * * * * </p>
-                <p>* * * * * * * * * * * * * * * * </p>
-                <p>* * * * * * * * * * * * * * * * </p>
-                <p>* * * * * * * * * * * * * * * * </p>
-                <p>********************************</p>
-            </div>
         </section>
 
 
     </main>
     <div class="divider"></div>
-    <footer class="mb-15">
-        <div>
-            <p>copyrigth @ 2025</p>
-            <a>mode furtif</a>
+    <footer class="grid grid-cols-12  mb-15">
+        <div class="col-span-2 col-start-6">
+            <p class="text-center">copyrigth @ 2025</p>
+        </div>
+        <div class="col-span-1 col-start-12">
+            <a class="text-right">mode furtif</a>
         </div>
     </footer>
     <script type="text/javascript" src="script/script.js"></script>

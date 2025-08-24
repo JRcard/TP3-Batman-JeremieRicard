@@ -1,5 +1,6 @@
 @use 'colors' as *
 @use 'typographie' as *
+@use 'general' as *
 @use 'mixins' as *
 
 .presentation
@@ -25,3 +26,8 @@
 .audio-player__time
     @include text_font(1.2rem, $brightGray)
     font-style: italic
+
+.bouton--audio
+    @extend %bouton
+    @include text_font(2.2rem, $teal) 
+    padding: 8px

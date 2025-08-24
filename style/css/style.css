@@ -55,7 +55,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.bouton {
+.content__btn, .arrows button, .bouton--audio, .bouton {
   font: 1.2rem "orbitron";
   color: #00cdcd;
   line-height: 1;
@@ -65,15 +65,10 @@ a:hover {
   position: relative;
   transition: top 0.6s ease-out !important;
 }
-.bouton:hover {
+.content__btn:hover, .arrows button:hover, .bouton--audio:hover, .bouton:hover {
   color: #00cdcd;
   border-color: #00cdcd;
   top: -5px;
-}
-.bouton--audio {
-  font: 2.2rem "roboto";
-  color: #007e80;
-  padding: 8px;
 }
 
 .divider {
@@ -126,6 +121,12 @@ a:hover {
   font-style: italic;
 }
 
+.bouton--audio {
+  font: 2.2rem "roboto";
+  color: #007e80;
+  padding: 8px;
+}
+
 .arsenal__titre {
   font: 4rem "orbitron";
   color: #00cdcd;
@@ -135,4 +136,191 @@ a:hover {
   font: 1.8rem "roboto";
   color: #a9a6a6;
   text-align: right;
+}
+
+/*Carousel*/
+.carousel {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.carousel__item {
+  width: 180px;
+  height: 250px;
+  position: absolute;
+  top: 80%;
+  transform: translateY(-70%);
+  left: 70%;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 100;
+  transition: 1s;
+}
+
+.carousel__list .carousel__item:nth-child(1), .carousel__list .carousel__item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+.carousel__list .carousel__item:nth-child(3) {
+  left: 67%;
+}
+.carousel__list .carousel__item:nth-child(4) {
+  left: calc(67% + 200px);
+}
+.carousel__list .carousel__item:nth-child(5) {
+  left: calc(67% + 400px);
+}
+.carousel__list .carousel__item:nth-child(6) {
+  left: calc(67% + 600px);
+}
+.carousel__list .carousel__item:nth-child(n+7) {
+  left: calc(67% + 800px);
+  opacity: 0;
+}
+
+.item__content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 55%;
+  text-align: left;
+  color: #a9a6a6;
+  display: none;
+}
+
+.carousel__list .carousel__item:nth-child(2) .item__content {
+  display: block;
+}
+
+.content__title {
+  font: 4rem "roboto";
+  color: #007e80;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+.content__name {
+  font: 4rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #00cdcd;
+  text-shadow: 0 0 5px #00fcfc;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+.content__des {
+  font: 1.2rem "roboto";
+  color: #fff;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+.content__list-01 {
+  font: 1.5rem "roboto";
+  color: #00cdcd;
+}
+.content__list-01 .list-01__item:last-child {
+  margin-top: 20px;
+}
+.content__list-02 {
+  font: 1.5rem "roboto";
+  color: #a9a6a6;
+  margin-left: 35px;
+}
+.content__btn {
+  width: 20%;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1.2s 1 forwards;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+.arrows {
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.arrows button {
+  background-color: #0d0d0d;
+}
+
+.carousel .timeRunning {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 4px;
+  background-color: #007e80;
+  left: 0;
+  top: 0;
+  animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*Media Queries*/
+@media screen and (max-width: 999px) {
+  header {
+    padding-left: 50px;
+  }
+  .item__content {
+    left: 50px;
+  }
+  .content__title, .content__name {
+    font-size: 70px;
+  }
+  .content__des {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 690px) {
+  header nav a {
+    font-size: 14px;
+    margin-right: 0;
+  }
+  .item__content {
+    top: 40%;
+  }
+  .content__title, .content__name {
+    font-size: 45px;
+  }
+  .content__btn button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .item__content {
+    width: 300px;
+    left: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

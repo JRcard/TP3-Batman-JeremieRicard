@@ -25,7 +25,7 @@ a
         text-decoration: underline
 
 
-.bouton
+%bouton
     @include header_font(1.2rem)    
     color: $teal
     border: 2px solid $teal
@@ -36,10 +36,9 @@ a
         color: $darkTurquoise
         border-color: $darkTurquoise
         top: -5px 
-    &--audio
-        @include text_font(2.2rem, $teal) 
-        padding: 8px
-        
+    
+.bouton
+    @extend %bouton
 
 .divider    
     height: 2px

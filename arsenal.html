@@ -36,7 +36,7 @@
     <main id="main">
         <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
         <section class="mb-15 grid grid-cols-12">
-            <div class="col-span-12 grid grid-cols-12">
+            <div class="col-span-12 grid grid-cols-12 mb-10">
                 <h1 class="arsenal__titre col-span-12 text-right mb-10 mt-20">Entrée #004 - Inventaire tactique</h1>
                 <h2 class="col-span-6 col-start-7 arsenal__sousTitre">La ville ne dort jamais. Moi non plus. Chaque
                     outil que je porte est
@@ -45,39 +45,167 @@
                     mémoire. Une guerre.</h2>
             </div>
 
-            <div class="col-span-12 carrousel">
-                <div class="card_01">
-                    <!-- https://www.hyperui.dev/components/marketing/cards?codeType=html&isRtl=false&previewWidth=100%25#component-5 -->
-                    <a href="#" class="group relative block h-64 sm:h-80 lg:h-96">
-                        <span class="absolute inset-0 border-2 border-dashed border-black"></span>
-
-                        <div
-                            class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
-                            <div
-                                class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="size-10 sm:size-12" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-
-                                <h2 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h2>
-                            </div>
-
-                            <div
-                                class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
-                                <h3 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
-
-                                <p class="mt-4 text-sm sm:text-base">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium
-                                    voluptatem
-                                    omnis atque culpa repellendus.
-                                </p>
-
-                                <p class="mt-8 font-bold">Read more</p>
+            <div class="col-span-12">
+                <!-- https://codepen.io/leonam-silva-de-souza/pen/XJbYJPK -->
+                <div class="carousel">
+                    <div class="carousel__list">
+                        <!-- Le 'style' était placé comme ça dans le code original. Si je met le BG-img dans le sass, il n'apparait pas en petit avant d'apparaitre en gros. -->
+                        <!-- J'ai pris le risque de le laisser là ;) -->
+                        <div class="carousel__item" style="background-image: url(./images/arsenal_batarang2.jpg);">
+                            <div class="item__content">
+                                <h3 class="content__title">Article 1</h3>
+                                <h4 class="content__name">Batarangs modifiés</h4>
+                                <p class="content__des my-5">Tranchants comme la vérité. Silencieux comme la peur. J’ai
+                                    modifié leur
+                                    courbe après ma première rencontre avec Killer Croc dans les égouts. Il
+                                    les esquivait trop facilement. Maintenant, ils reviennent. Comme moi.</p>
+                                <ul class="content__list-01">
+                                    <li class="list-01__item">Utilisations:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">neutralisation à distance</li>
+                                            <li class="list-02__item">distraction</li>
+                                            <li class="list-02__item">sabotage</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-01__item">Variantes:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">explosifs</li>
+                                            <li class="list-02__item">électriques</li>
+                                            <li class="list-02__item">à retour magnétique</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="content__btn mt-5">
+                                    <button>En savoir plus</button>
+                                </div>
                             </div>
                         </div>
-                    </a>
+
+                        <div class="carousel__item"
+                            style="background-image: url('https://u.cubeupload.com/Leo21/owl1.jpg');">
+                            <div class="item__content">
+                                <h3 class="content__title">Article 2</h3>
+                                <h4 class="content__name">Gel instantané WayneTech</h4>
+                                <p class="content__des my-10">Développé après l’incendie du Narrows. J’ai vu des enfants
+                                    brûler. Ce gel arrête tout. Feu, mouvement, respiration. Je l’ai testé sur Firefly.
+                                    Il n’a pas aimé.</p>
+                                <ul class="content__list-01">
+                                    <li class="list-01__item">Utilisations:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">immobilisation rapide</li>
+                                            <li class="list-02__item">extinction de flammes</li>
+                                            <li class="list-02__item">verrouillage de mécanismes</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-01__item">Condition:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">température ambiante doit être inférieure à 40°C
+                                                pour efficacité maximale</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="content__btn mt-5">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__item"
+                            style="background-image: url('https://u.cubeupload.com/Leo21/crow.jpg');">
+                            <div class="item__content">
+                                <h3 class="content__title">Article 3</h3>
+                                <h4 class="content__name">Capsule de fumée à triple densité</h4>
+                                <p class="content__des my-10">La peur est une arme. Mais elle doit être maîtrisée. Après
+                                    que
+                                    Scarecrow ait retourné mes propres toxines contre moi, j’ai conçu une fumée qui ne
+                                    se dissipe pas. Elle reste. Elle hante.</p>
+                                <ul class="content__list-01">
+                                    <li class="list-01__item">Utilisations:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">évacuation</li>
+                                            <li class="list-02__item">confusion</li>
+                                            <li class="list-02__item">camouflage</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-01__item">Effet secondaire:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">provoque hallucinations légères chez les sujets
+                                                non préparés</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="content__btn mt-5">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__item"
+                            style="background-image: url('https://u.cubeupload.com/Leo21/owl1.jpg');">
+                            <div class="item__content">
+                                <h3 class="content__title">Article 4</h3>
+                                <h4 class="content__name">Gants à induction électrique</h4>
+                                <p class="content__des my-10">J’ai perdu le contrôle face à Zsasz. Trop rapide. Trop
+                                    fou. Ces
+                                    gants délivrent 50 000 volts. Ils ne tuent pas. Mais ils font réfléchir. La douleur
+                                    est parfois le seul langage que les monstres comprennent.</p>
+                                <ul class="content__list-01">
+                                    <li class="list-01__item">Utilisations:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">combat rapproché</li>
+                                            <li class="list-02__item">neutralisation non létale</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-01__item">Recharge:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">par friction ou port USB-C (WayneTech only)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="content__btn mt-5">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__item"
+                            style="background-image: url('https://u.cubeupload.com/Leo21/owl1.jpg');">
+                            <div class="item__content">
+                                <h3 class="content__title">Article 5</h3>
+                                <h4 class="content__name">Injecteur d’adrénaline</h4>
+                                <p class="content__des my-10">Quand Bane m’a brisé. Quand j’ai rampé dans les ténèbres.
+                                    J’ai
+                                    compris que la volonté ne suffit pas toujours. Ce sérum est mon dernier recours. Une
+                                    dose. Une minute. Une revanche.</p>
+                                <ul class="content__list-01">
+                                    <li class="list-01__item">Utilisations:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">récupération instantané</li>
+                                            <li class="list-02__item">boost musculaire temporaire</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-01__item">Risques:
+                                        <ul class="content__list-02">
+                                            <li class="list-02__item">dépendance psychologique</li>
+                                            <li class="list-02__item">perte de contrôle</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="content__btn mt-5">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="arrows">
+                        <button class="prev">
+                            < </button>
+                                <button class="next">></button>
+                    </div>
+
+                    <div class="timeRunning"></div>
                 </div>
             </div>
         </section>
@@ -91,7 +219,8 @@
             <a class="text-right" tabindex="0">mode furtif</a>
         </div>
     </footer>
-    <script src="script/script.js"></script>
+    <script src="script/carousel.js">
+    </script>
 </body>
 
 </html>

@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
+    <!-- script -->
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -32,7 +35,52 @@
     </header>
     <main id="main">
         <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
+        <section class="mb-15 grid grid-cols-12">
+            <div class="col-span-12 grid grid-cols-12">
+                <h1 class="arsenal__titre col-span-12 text-right mb-10 mt-20">Entrée #004 - Inventaire tactique</h1>
+                <h2 class="col-span-6 col-start-7 arsenal__sousTitre">La ville ne dort jamais. Moi non plus. Chaque
+                    outil que je porte est
+                    une réponse à une
+                    blessure. Une
+                    mémoire. Une guerre.</h2>
+            </div>
 
+            <div class="col-span-12 carrousel">
+                <div class="card_01">
+                    <!-- https://www.hyperui.dev/components/marketing/cards?codeType=html&isRtl=false&previewWidth=100%25#component-5 -->
+                    <a href="#" class="group relative block h-64 sm:h-80 lg:h-96">
+                        <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+                        <div
+                            class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+                            <div
+                                class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-10 sm:size-12" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+
+                                <h2 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h2>
+                            </div>
+
+                            <div
+                                class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                                <h3 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
+
+                                <p class="mt-4 text-sm sm:text-base">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium
+                                    voluptatem
+                                    omnis atque culpa repellendus.
+                                </p>
+
+                                <p class="mt-8 font-bold">Read more</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
     <div class="divider"></div>
     <footer class="grid grid-cols-12 mt-5 mb-15">

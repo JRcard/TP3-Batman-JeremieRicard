@@ -81,7 +81,7 @@ a:hover {
   background-color: #007e80;
 }
 
-menu__list {
+.menu__list {
   list-style: none;
 }
 
@@ -124,4 +124,15 @@ menu__list {
   font: 1.2rem "roboto";
   color: #a9a6a6;
   font-style: italic;
+}
+
+.arsenal__titre {
+  font: 4rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+}
+.arsenal__sousTitre {
+  font: 1.8rem "roboto";
+  color: #a9a6a6;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

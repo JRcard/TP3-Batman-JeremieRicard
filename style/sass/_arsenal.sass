@@ -1,0 +1,12 @@
+@use 'colors' as *
+@use 'typographie' as *
+@use 'mixins' as *
+
+
+.arsenal
+    &__titre
+        @include header_font(4rem)
+    &__sousTitre
+        @include text_font(1.8rem, $brightGray )
+        text-align: right
+        

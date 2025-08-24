@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/media-chrome@4/+esm"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="description" content="Bat-ordinateur: dossier #000, page 1: Présentation">
     <title>Dossier personnel</title>
 </head>
@@ -16,19 +17,20 @@
 <body class="max-w-[1900px] w-[90%] mx-auto">
     <header>
         <div>
-            <nav class="menu grid grid-cols-12 py-10">
-                <h1><img class="menu__logo col-span-1 w-[55%]" src="images/bat-logo-croped.png" alt=""></h1>
+            <nav class="menu grid grid-cols-12 py-10" aria-label="Menu principal">
+                <h1><img class="menu__logo col-span-1 w-[55%]" src="images/bat-logo-croped.png"
+                        alt="Logo simple - masque de batamn"></h1>
                 <ul class="menu__list flex justify-end items-center col-span-4 col-start-9">
-                    <li class="menu__item text-right"><a href="index.html">Dossier personnel</a></li>
+                    <li class="menu__item text-right"><a href="index.html" aria-current="page">Dossier personnel</a>
+                    </li>
                     <li class="menu__item text-right"><a href="arsenal.html">Arsenal technologique</a></li>
                     <li class="menu__item text-right"><a href="reseau&allies.html">Réseaux & Alliés</a></li>
                 </ul>
             </nav>
         </div>
-
-
     </header>
-    <main>
+    <main id="main">
+        <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
         <section class="presentation mb-15">
             <h2 class="presentation__titre text-right mb-10 mt-20">Entrée #001 - Présentation</h2>
             <div class="w-[80%] mx-auto grid grid-cols-12">
@@ -36,8 +38,7 @@
                     <p class="presentation__texte">Je suis né dans le chaos.</p>
                     <p>Pas celui qu’on montre aux infos. Le vrai.</p>
                     <p>Celui qui ronge les fondations, silencieusement.</p>
-                    <p class="pb-5">Gotham ne pardonne pas. Elle ne protège pas.
-                        Elle attend qu’on tombe.
+                    <p class="pb-5">Gotham ne pardonne pas. Elle attend qu’on tombe.
                     </p>
                     <p>
                         Je suis tombé.</p>
@@ -46,8 +47,7 @@
                     <p class="pb-5">Pour que plus personne ne tombe comme moi.</p>
 
                     <p class="presentation__texte--emphase pb-5">
-                        Je ne suis pas un héros.
-                        Je suis une nécessité.
+                        Je ne suis pas un héros. Je suis une nécessité.
                         Gotham ne se sauve pas avec des discours.
                         Elle se nettoie dans l’ombre, une ruelle à la fois.
                     </p>
@@ -70,7 +70,7 @@
             <h2 class="identite__titre text-right mb-10 mt-20">Entrée #002 - Identité masqué</h2>
             <div class="grid grid-cols-12 py-15">
                 <div class="col-span-7 flex flex-col justify-center">
-                    <div class="identite__list flex pb-5">
+                    <div class="identite__list flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Alias détectés :</h3>
                         <ul>
                             <li>
@@ -85,39 +85,39 @@
                         </ul>
                     </div>
                     <!-- div model modifié -->
-                    <div class="flex items-center pb-5">
+                    <div class="flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Nom réel :</h3>
                         <p class="identite__texte">█████ ████████</p>
                     </div>
-                    <div class="flex items-center pb-5">
+                    <div class="flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Statut :</h3>
                         <p class="identite__texte">Codé – Niveau d’accès requis : 7</p>
                     </div>
-                    <div class="flex items-center pb-5">
+                    <div class="flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Empreinte ADN :</h3>
                         <p class="identite__texte">87% match avec base WayneTech</p>
                     </div>
-                    <div class="flex items-center pb-5">
+                    <div class="flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Rétine :</h3>
                         <p class="identite__texte">Analyse en cours...</p>
                     </div>
-                    <div class="flex items-center pb-5">
+                    <div class="flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Coordonnées :</h3>
                         <p class="identite__texte">Brouillage actif</p>
                     </div>
-                    <div class="flex pb-5">
+                    <div class="flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Note système :</h3>
                         <p class="identite__texte">“L’identité de l’opérateur est connue.<br>
                             Mais elle ne doit jamais être confirmée.<br>
                             Le doute est une arme. L’ombre, un refuge.”</p>
                     </div>
-                    <div class="flex items-center pb-5">
+                    <div class="flex items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Protocole d’accès :</h3>
                         <p class="identite__texte">[REDACTED]</p>
                     </div>
                 </div>
                 <div class="col-span-5 flex flex-col justify-center">
-                    <img class="" src="images/logo-batman-teal.png">
+                    <img class="" src="images/logo-batman-teal.png" alt="Logo de batman">
                 </div>
             </div>
             <div class="divider"></div>
@@ -126,32 +126,13 @@
             <h2 class="journal__titre text-right  mb-10 mt-20">Entrée #003 - Journal audio</h2>
             <div class="grid grid-cols-12 gap-8 py-15">
                 <div class="journal__carte col-span-4">
-
-                    <media-controller class="bg-transparent" audio>
-                        <audio id="audio_player" slot="media"
-                            src="https://stream.mux.com/O4h5z00885HEucNNa1rV02wZapcGp01FXXoJd35AHmGX7g/audio.m4a"
-                            crossorigin></audio>
-                        <h3 class="py-3">Rapport #003-A</h3>
-                        <h4 class="pb-3">La nuit du Joker</h4>
-                        <p class="pb-3">Durée: <media-time-display class="audio-player__time italic"
-                                showduration></media-time-display></p>
-                        <media-seek-backward-button class="bouton">
-                            <svg slot="icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M11 8L5 12L11 16V8Z M19 8L13 12L19 16V8Z" fill="teal" />
-                                <use href="#backward" />
-                            </svg>
-                        </media-seek-backward-button>
-                        <media-play-button class="bouton">
-                            <svg slot="play" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M6 21 L21 12 L6 3 V21 Z" fill="teal" />
-                                <use href="#play" />
-                            </svg>
-                            <svg slot="pause" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M6 20h4V4H6v16Zm8-16v16h4V4h-4Z" fill="teal"></path>
-                                <use href="#pause" />
-                            </svg></media-play-button>
-
-                    </media-controller>
+                    <h3 class="py-3">Rapport #003-A</h3>
+                    <h4 class="pb-3">La nuit du Joker</h4>
+                    <p class="pb-3">Durée: <span class="audio-player__time italic" id="duree-003-A"></span></p>
+                    <div>
+                        <i class='bx bx-rewind bouton bouton--audio' id="rewind-003-A" tabindex="0"></i>
+                        <i class='bx bx-play bouton bouton--audio' id="play-003-A" tabindex="0"></i>
+                    </div>
                     <p>**Texte à enregistrer** : “Il a pris Tim. Une virée en voiture. Une balade sanglante.
                         Le Joker ne tue pas pour le plaisir. Il tue pour le chaos.
                         Je suis arrivé trop tard. Pas pour sauver les victimes.
@@ -160,31 +141,13 @@
 
                 </div>
                 <div class="journal__carte col-span-4">
-                    <media-controller class="bg-transparent" audio>
-                        <audio id="audio_player" slot="media"
-                            src="https://stream.mux.com/O4h5z00885HEucNNa1rV02wZapcGp01FXXoJd35AHmGX7g/audio.m4a"
-                            crossorigin></audio>
-                        <h3 class="py-3">Rapport #003-B</h3>
-                        <h4 class="pb-3">Le Pacte de Gordon</h4>
-                        <p class="pb-3">Durée: <media-time-display class="audio-player__time italic"
-                                showduration></media-time-display></p>
-                        <media-seek-backward-button class="bouton">
-                            <svg slot="icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M11 8L5 12L11 16V8Z M19 8L13 12L19 16V8Z" fill="teal" />
-                                <use href="#backward" />
-                            </svg>
-                        </media-seek-backward-button>
-                        <media-play-button class="bouton">
-                            <svg slot="play" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M6 21 L21 12 L6 3 V21 Z" fill="teal" />
-                                <use href="#play" />
-                            </svg>
-                            <svg slot="pause" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M6 20h4V4H6v16Zm8-16v16h4V4h-4Z" fill="teal"></path>
-                                <use href="#pause" />
-                            </svg></media-play-button>
-
-                    </media-controller>
+                    <h3 class="py-3">Rapport #003-B</h3>
+                    <h4 class="pb-3">Le Pacte de Gordon</h4>
+                    <p class="pb-3">Durée: <span class="audio-player__time italic" id="duree-003-B"></span></p>
+                    <div>
+                        <i class='bx bx-rewind bouton bouton--audio' id="rewind-003-B" tabindex="0"></i>
+                        <i class='bx bx-play bouton bouton--audio' id="play-003-B" tabindex="0"></i>
+                    </div>
                     <p>**Texte à enregistrer** : “Jim a pris sa retraite.
                         Il dit que Gotham n’a plus besoin de lui.
                         Il sait que c’est faux.
@@ -194,31 +157,14 @@
 
                 </div>
                 <div class="journal__carte col-span-4">
-                    <media-controller class="bg-transparent" audio>
-                        <audio id="audio_player" slot="media"
-                            src="https://stream.mux.com/O4h5z00885HEucNNa1rV02wZapcGp01FXXoJd35AHmGX7g/audio.m4a"
-                            crossorigin></audio>
-                        <h3 class="py-3">Rapport #003-C</h3>
-                        <h4 class="pb-3">L’Opération Silence</h4>
-                        <p class="pb-3">Durée: <media-time-display class="audio-player__time italic"
-                                showduration></media-time-display></p>
-                        <media-seek-backward-button class="bouton">
-                            <svg slot="icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M11 8L5 12L11 16V8Z M19 8L13 12L19 16V8Z" fill="teal" />
-                                <use href="#backward" />
-                            </svg>
-                        </media-seek-backward-button>
-                        <media-play-button class="bouton">
-                            <svg slot="play" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M6 21 L21 12 L6 3 V21 Z" fill="teal" />
-                                <use href="#play" />
-                            </svg>
-                            <svg slot="pause" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M6 20h4V4H6v16Zm8-16v16h4V4h-4Z" fill="teal"></path>
-                                <use href="#pause" />
-                            </svg></media-play-button>
 
-                    </media-controller>
+                    <h3 class="py-3">Rapport #003-C</h3>
+                    <h4 class="pb-3">L’Opération Silence</h4>
+                    <p class="pb-3">Durée: <span class="audio-player__time italic" id="duree-003-C"></span></p>
+                    <div>
+                        <i class='bx bx-rewind bouton bouton--audio' id="rewind-003-C" tabindex="0"></i>
+                        <i class='bx bx-play bouton bouton--audio' id="play-003-C" tabindex="0"></i>
+                    </div>
                     <p>**Texte à enregistrer** : “Gotham est coupée du monde.
                         Les ponts ont sauté. Les lois aussi.
                         Je patrouille sans lumière. Sans bruit.
@@ -234,15 +180,15 @@
 
     </main>
     <div class="divider"></div>
-    <footer class="grid grid-cols-12  mb-15">
+    <footer class="grid grid-cols-12 mt-5 mb-15">
         <div class="col-span-2 col-start-6">
             <p class="text-center">copyrigth @ 2025</p>
         </div>
         <div class="col-span-1 col-start-12">
-            <a class="text-right">mode furtif</a>
+            <a class="text-right" tabindex="0">mode furtif</a>
         </div>
     </footer>
-    <script type="text/javascript" src="script/script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

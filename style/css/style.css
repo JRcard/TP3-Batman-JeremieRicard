@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "orbitron";
   src: url("../../fonts/Orbitron.ttf");
@@ -69,6 +70,11 @@ a:hover {
   border-color: #00cdcd;
   top: -5px;
 }
+.bouton--audio {
+  font: 2.2rem "roboto";
+  color: #007e80;
+  padding: 8px;
+}
 
 .divider {
   height: 2px;
@@ -77,6 +83,19 @@ a:hover {
 
 menu__list {
   list-style: none;
+}
+
+/* CSS pour le lien caché */
+.screen-reader-text {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
 }
 
 .presentation__texte--emphase {

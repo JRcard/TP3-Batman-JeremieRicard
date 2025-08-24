@@ -36,6 +36,10 @@ a
         color: $darkTurquoise
         border-color: $darkTurquoise
         top: -5px 
+    &--audio
+        @include text_font(2.2rem, $teal) 
+        padding: 8px
+        
 
 .divider    
     height: 2px
@@ -44,3 +48,14 @@ menu
     &__list
         list-style: none
 
+/* CSS pour le lien caché */
+.screen-reader-text  
+    border: 0
+    clip-path: inset(50%)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
+    word-wrap: normal !important

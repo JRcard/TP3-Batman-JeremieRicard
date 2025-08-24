@@ -276,7 +276,7 @@ a:hover {
   background-color: #007e80;
   left: 0;
   top: 0;
-  animation: runningTime 7s linear 1 forwards;
+  animation: runningTime 12s linear 1 forwards;
 }
 
 @keyframes runningTime {

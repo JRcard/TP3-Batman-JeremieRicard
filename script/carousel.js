@@ -6,7 +6,7 @@ var item = document.querySelector(".carousel__item");
 var runningTime = document.querySelector(".timeRunning");
 
 let timeRunning = 3000;
-let timeAutoNext = 5500;
+let timeAutoNext = 12000;
 
 nextBtn.onclick = function () {
 	showSlider("next");
@@ -26,7 +26,7 @@ function resetTimeAnimation() {
 	runningTime.style.animation = "none";
 	runningTime.offsetHeight;
 	runningTime.style.animation = null;
-	runningTime.style.animation = "runningTime 7s linear 1 forwards";
+	runningTime.style.animation = "runningTime 12s linear 1 forwards";
 }
 
 function showSlider(type) {

@@ -11,7 +11,7 @@
 	"orientation": "portrait-primary",
 	"screenshots": [
 		{
-			"src": "images/images/image.png",
+			"src": "images/image.png",
 			"sizes": "1510x710",
 			"type": "image/png",
 			"form_factor": "wide",

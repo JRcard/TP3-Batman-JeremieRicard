@@ -1,13 +1,22 @@
 {
-	"name": "Bat-ordinateur",
+	"name": "Bat-Ordinateur",
 	"short_name": "Bat-Ordi",
 	"start_url": "https://jrcard.github.io/TP3-Batman-JeremieRicard/",
-	"description": "Un accès prévilégié au bat-Ordinateur",
+	"description": "Un accès prévilégié au Bat-Ordinateur",
 	"display": "standalone",
 	"theme_color": "#0d0d0d",
 	"background_color": "#0d0d0d",
 	"lang": "fr",
 	"orientation": "portrait-primary",
+	"screenshots": [
+		{
+			"src": "images/image.png",
+			"sizes": "1510x710",
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "Wonder Widgets"
+		}
+	],
 	"icons": [
 		{
 			"purpose": "maskable",
@@ -60,7 +69,7 @@
 	],
 	"related_applications": [
 		{
-			"platform": "web"
+			"platform": "chrome_web_store"
 		},
 		{
 			"platform": "play",

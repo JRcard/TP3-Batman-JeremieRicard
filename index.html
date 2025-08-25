@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="description" content="Bat-ordinateur: dossier #000, page 1: Présentation">
@@ -116,8 +117,9 @@
                         <p class="identite__texte">[REDACTED]</p>
                     </div>
                 </div>
-                <div class="col-span-5 flex flex-col justify-center">
-                    <img class="" src="images/logo-batman-teal.png" alt="Logo de batman">
+                <div class="col-span-5 flex flex-col justify-center" data-aos="fade-in" data-aos-duration="1000"
+                    data-aos-easing="ease-in">
+                    <img src="images/logo-batman-teal.png" alt="Logo de batman">
                 </div>
             </div>
             <div class="divider"></div>
@@ -188,7 +190,9 @@
             <a class="text-right" tabindex="0">mode furtif</a>
         </div>
     </footer>
+    <script src="script/script.js"></script>
     <script src="script/audio_player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
 
 </html>

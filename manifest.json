@@ -11,7 +11,7 @@
 	"orientation": "portrait-primary",
 	"screenshots": [
 		{
-			"src": "images/image.png",
+			"src": "TP3-Batman-JeremieRicard/images/image.png",
 			"sizes": "1510x710",
 			"type": "image/png",
 			"form_factor": "wide",
@@ -21,50 +21,44 @@
 	"icons": [
 		{
 			"purpose": "maskable",
-			"sizes": "25x25",
-			"src": "maskable_icon.png",
-			"type": "image/png"
-		},
-		{
-			"purpose": "maskable",
 			"sizes": "48x48",
-			"src": "maskable_icon_x48.png",
+			"src": "TP3-Batman-JeremieRicard/maskable_icon_x48.png",
 			"type": "image/png"
 		},
 		{
 			"purpose": "maskable",
 			"sizes": "72x72",
-			"src": "maskable_icon_x72.png",
+			"src": "TP3-Batman-JeremieRicard/maskable_icon_x72.png",
 			"type": "image/png"
 		},
 		{
 			"purpose": "maskable",
 			"sizes": "96x96",
-			"src": "maskable_icon_x96.png",
+			"src": "TP3-Batman-JeremieRicard/maskable_icon_x96.png",
 			"type": "image/png"
 		},
 		{
 			"purpose": "maskable",
 			"sizes": "128x128",
-			"src": "maskable_icon_x128.png",
+			"src": "TP3-Batman-JeremieRicard/maskable_icon_x128.png",
 			"type": "image/png"
 		},
 		{
 			"purpose": "maskable",
 			"sizes": "192x192",
-			"src": "maskable_icon_x192.png",
+			"src": "TP3-Batman-JeremieRicard/maskable_icon_x192.png",
 			"type": "image/png"
 		},
 		{
 			"purpose": "maskable",
 			"sizes": "384x384",
-			"src": "maskable_icon_x384.png",
+			"src": "TP3-Batman-JeremieRicard/maskable_icon_x384.png",
 			"type": "image/png"
 		},
 		{
 			"purpose": "maskable",
 			"sizes": "512x512",
-			"src": "maskable_icon_x512.png",
+			"src": "TP3-Batman-JeremieRicard/maskable_icon_x512.png",
 			"type": "image/png"
 		}
 	]

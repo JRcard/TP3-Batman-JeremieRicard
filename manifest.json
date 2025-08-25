@@ -1,6 +1,7 @@
 {
 	"name": "Bat-Ordinateur",
 	"short_name": "Bat-Ordi",
+	"id": "https://jrcard.github.io/TP3-Batman-JeremieRicard/",
 	"start_url": "https://jrcard.github.io/TP3-Batman-JeremieRicard/",
 	"description": "Un accès prévilégié au Bat-Ordinateur",
 	"display": "standalone",

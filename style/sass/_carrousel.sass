@@ -5,6 +5,7 @@
 
 /*Carousel*/
 .carousel
+	width: 100%
 	height: 100vh
 	overflow: hidden
 	position: relative
@@ -35,6 +36,8 @@
 
 		&:nth-child(3)
 			left: calc(67% + 180px)
+			@include responsive(1230px)
+				left: calc(90% + 180px)
 
 		&:nth-child(4)
 			left: calc(67% + 380px)
@@ -53,6 +56,8 @@
 		text-align: left
 		color: $brightGray
 		display: none
+		@include responsive(690px)
+			top: 55%
 
 .carousel__list
 	.carousel__item:nth-child(2)
@@ -115,6 +120,12 @@
 	display: flex
 	gap: 10px
 	align-items: center
+	@include responsive(992px)
+		top: 92%
+		right: 30%
+	@include responsive(690px)
+		top: 92%
+		right: 30%
 	button
 		@extend %bouton
 		@include text_font(2.2rem, $teal) 
@@ -138,7 +149,7 @@
 		width: 100%
 
 /*Media Queries*/
-@media screen and (max-width: 999px)
+@media screen and (max-width: 992px)
 	header
 		padding-left: 50px
 	.item
@@ -148,8 +159,8 @@
 	.content
 		&__title,
 		&__name
-			font-size: 70px
-
+			font-size: 50px
+		&__list-02,
 		&__des
 			font-size: 16px
 
@@ -167,7 +178,7 @@
 	.content
 		&__title,
 		&__name
-			font-size: 45px
+			font-size: 35px
 
 		&__btn
 			button

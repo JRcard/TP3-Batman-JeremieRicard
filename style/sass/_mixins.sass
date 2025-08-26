@@ -14,3 +14,7 @@
   color: $color
   text-shadow: 0 0 5px $shadow
   transition: all 0.3s ease-out
+
+@mixin responsive($breakpoint)
+    @media (max-width: $breakpoint)
+        @content

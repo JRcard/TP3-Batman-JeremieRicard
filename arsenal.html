@@ -17,8 +17,8 @@
     <title>Arsenal technologique</title>
 </head>
 
-<body class="max-w-[1900px] w-[90%] mx-auto">
-    <header>
+<body>
+    <header class="max-w-[1900px] w-[90%] mx-auto">
         <div>
             <nav class="menu grid grid-cols-12 py-10" aria-label="Menu principal">
                 <a href="/" class="header__logo" title="Retour à l'accueil"><img class="menu__logo col-span-1 w-[55%]"
@@ -33,12 +33,13 @@
             </nav>
         </div>
     </header>
-    <main id="main">
+    <main class="max-w-[1900px] lg:w-[90%] lg:mx-auto" id="main">
         <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
         <section class="mb-15 grid grid-cols-12">
             <div class="col-span-12 grid grid-cols-12 mb-10">
                 <h1 class="arsenal__titre col-span-12 text-right mb-10 mt-20">Entrée #004 - Inventaire tactique</h1>
-                <h2 class="col-span-6 col-start-7 arsenal__sousTitre">La ville ne dort jamais. Moi non plus. Chaque
+                <h2 class="col-span-12 lg:col-span-6 lg:col-start-7 arsenal__sousTitre">La ville ne dort jamais. Moi non
+                    plus. Chaque
                     outil que je porte est
                     une réponse à une
                     blessure. Une
@@ -55,7 +56,7 @@
                             <div class="item__content">
                                 <h3 class="content__title">Article 5</h3>
                                 <h4 class="content__name">Batarangs modifiés</h4>
-                                <p class="content__des my-5">Tranchants comme la vérité. Silencieux comme la peur. J’ai
+                                <p class="content__des my-10">Tranchants comme la vérité. Silencieux comme la peur. J’ai
                                     modifié leur
                                     courbe après ma première rencontre avec Killer Croc dans les égouts. Il
                                     les esquivait trop facilement. Maintenant, ils reviennent. Comme moi.</p>
@@ -103,10 +104,11 @@
                             </div>
                         </div>
 
-                        <div class="carousel__item bg-[url('./images/arsenal_capsuleFume.jpg')] bg-position-[100%]">
+                        <div
+                            class="carousel__item bg-[url('./images/arsenal_capsuleFume.jpg')] bg-position-[60%] lg:bg-position-[100%]">
                             <div class="item__content">
                                 <h3 class="content__title">Article 2</h3>
-                                <h4 class="content__name">Capsule de fumée à triple densité</h4>
+                                <h4 class="content__name">Capsule de fumée</h4>
                                 <p class="content__des my-10">La peur est une arme. Mais elle doit être maîtrisée. Après
                                     que
                                     Scarecrow ait retourné mes propres toxines contre moi, j’ai conçu une fumée qui ne
@@ -129,7 +131,8 @@
                             </div>
                         </div>
 
-                        <div class="carousel__item bg-[url('./images/arsenal_gants.jpg')] bg-position-[90%]">
+                        <div
+                            class="carousel__item bg-[url('./images/arsenal_gants.jpg')] bg-position-[65%] lg:bg-position-[90%]">
                             <div class="item__content">
                                 <h3 class="content__title">Article 3</h3>
                                 <h4 class="content__name">Gants à induction électrique</h4>
@@ -153,7 +156,8 @@
                             </div>
                         </div>
 
-                        <div class="carousel__item bg-[url('./images/arsenal_adrenalineShot.jpg')] bg-position-[65%]">
+                        <div
+                            class="carousel__item bg-[url('./images/arsenal_adrenalineShot.jpg')] bg-position-[88%] lg:bg-position-[65%]">
                             <div class="item__content">
                                 <h3 class="content__title">Article 4</h3>
                                 <h4 class="content__name">Injecteur d’adrénaline</h4>
@@ -189,9 +193,10 @@
                 </div>
             </div>
         </section>
+        <div class="divider"></div>
     </main>
-    <div class="divider"></div>
-    <footer class="grid grid-cols-12 mt-5 mb-15">
+
+    <footer class="w-[90%] mx-auto grid grid-cols-12 mt-5 mb-15">
         <div class="col-span-2 col-start-6">
             <p class="text-center">copyrigth @ 2025</p>
         </div>

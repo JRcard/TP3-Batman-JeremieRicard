@@ -6,6 +6,9 @@
 .arsenal
     &__titre
         @include header_font(4rem)
+        @include responsive(570px)
+            @include header_font(3.3rem)
+            
     &__sousTitre
         @include text_font(1.4rem, $brightGray )
         @include glow-effect($darkTurquoise, $cyan)

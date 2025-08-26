@@ -72,6 +72,7 @@ a:hover {
 }
 
 .divider {
+  max-width: 100%;
   height: 2px;
   background-color: #007e80;
 }
@@ -132,6 +133,13 @@ a:hover {
   color: #00cdcd;
   line-height: 1;
 }
+@media (max-width: 570px) {
+  .arsenal__titre {
+    font: 3.3rem "orbitron";
+    color: #00cdcd;
+    line-height: 1;
+  }
+}
 .arsenal__sousTitre {
   font: 1.4rem "roboto";
   color: #a9a6a6;
@@ -143,6 +151,7 @@ a:hover {
 
 /*Carousel*/
 .carousel {
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -172,6 +181,11 @@ a:hover {
 .carousel__list .carousel__item:nth-child(3) {
   left: calc(67% + 180px);
 }
+@media (max-width: 1230px) {
+  .carousel__list .carousel__item:nth-child(3) {
+    left: calc(90% + 180px);
+  }
+}
 .carousel__list .carousel__item:nth-child(4) {
   left: calc(67% + 380px);
 }
@@ -189,6 +203,11 @@ a:hover {
   text-align: left;
   color: #a9a6a6;
   display: none;
+}
+@media (max-width: 690px) {
+  .item__content {
+    top: 55%;
+  }
 }
 
 .carousel__list .carousel__item:nth-child(2) .item__content {
@@ -261,6 +280,18 @@ a:hover {
   gap: 10px;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .arrows {
+    top: 92%;
+    right: 30%;
+  }
+}
+@media (max-width: 690px) {
+  .arrows {
+    top: 92%;
+    right: 30%;
+  }
+}
 .arrows button {
   font: 2.2rem "roboto";
   color: #007e80;
@@ -287,7 +318,7 @@ a:hover {
   }
 }
 /*Media Queries*/
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 992px) {
   header {
     padding-left: 50px;
   }
@@ -295,9 +326,9 @@ a:hover {
     left: 50px;
   }
   .content__title, .content__name {
-    font-size: 70px;
+    font-size: 50px;
   }
-  .content__des {
+  .content__list-02, .content__des {
     font-size: 16px;
   }
 }
@@ -310,7 +341,7 @@ a:hover {
     top: 40%;
   }
   .content__title, .content__name {
-    font-size: 45px;
+    font-size: 35px;
   }
   .content__btn button {
     padding: 10px 15px;

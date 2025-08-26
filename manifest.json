@@ -11,10 +11,17 @@
 	"orientation": "portrait-primary",
 	"screenshots": [
 		{
-			"src": "images/image.png",
+			"src": "images/capture_wide.png",
 			"sizes": "1510x710",
 			"type": "image/png",
 			"form_factor": "wide",
+			"label": "Wonder Widgets"
+		},
+		{
+			"src": "images/capture_narrow.png",
+			"sizes": "538x657",
+			"type": "image/png",
+			"form_factor": "narrow",
 			"label": "Wonder Widgets"
 		}
 	],

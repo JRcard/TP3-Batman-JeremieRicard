@@ -1,17 +1,15 @@
+@use 'general' as *
 @use 'colors' as *
 @use 'typographie' as *
 @use 'mixins' as *
 @use 'carrousel' as *
 
 
-.arsenal
+.arsenal,
+.vehicle
     &__titre
-        @include header_font(4rem)
-        @include responsive(570px)
-            @include header_font(3.3rem)
+        @extend %titre
             
     &__sousTitre
-        @include text_font(1.4rem, $brightGray )
-        @include glow-effect($darkTurquoise, $cyan)
-        text-align: right
-        
+        @extend %sousTitre
+

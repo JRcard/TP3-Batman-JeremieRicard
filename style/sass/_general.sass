@@ -23,7 +23,15 @@ a
     transition: all 0.6s ease-out
     &:hover
         text-decoration: underline
-
+%titre
+    @include header_font(4rem)
+    @include responsive(570px)
+        @include header_font(3.3rem)
+        
+%sousTitre
+    @include text_font(1.4rem, $brightGray )
+    @include glow-effect($darkTurquoise, $cyan)
+    text-align: right
 
 %bouton
     @include header_font(1.2rem)    

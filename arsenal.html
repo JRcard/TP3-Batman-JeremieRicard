@@ -50,8 +50,6 @@
                 <!-- https://codepen.io/leonam-silva-de-souza/pen/XJbYJPK -->
                 <div class="carousel">
                     <div class="carousel__list">
-                        <!-- Le 'style' était placé comme ça dans le code original. Si je met le BG-img dans le sass, il n'apparait pas en petit avant d'apparaitre en gros. -->
-                        <!-- J'ai pris le risque de le laisser là ;) -->
                         <div class="carousel__item bg-[url(./images/arsenal_batarang.jpg)] bg-position-[65%]">
                             <div class="item__content">
                                 <h3 class="content__title">Article 5</h3>
@@ -194,6 +192,73 @@
             </div>
         </section>
         <div class="divider"></div>
+        <section class="accordion grid grid-cols-12 gap-6">
+            <div class="col-span-12 grid grid-cols-12 mb-10">
+                <h1 class="arsenal__titre col-span-12 text-right mb-10 mt-20">Entrée #005 - Véhicules</h1>
+                <h2 class="col-span-12 lg:col-span-6 lg:col-start-7 arsenal__sousTitre">Chaque machine est une
+                    extension de ma volonté. Elles ne sont pas belles. Elles sont nécessaires.</h2>
+            </div>
+            <!-- https://www.hyperui.dev/components/marketing/cards?codeType=html&isRtl=false&previewWidth=100%25#component-5 -->
+            <div class="group relative block h-64 sm:h-80 lg:h-96 col-span-6">
+                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+                <div
+                    class="relative flex h-full transform items-end border-2 border-black bg-[url('./images/Tumbler_resized.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
+                    <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                        <h2 class="mt-4 text-xl font-medium sm:text-2xl">Tumbler</h2>
+                    </div>
+                    <div
+                        class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                        <h3 class="mt-4 text-xl font-medium sm:text-2xl">Tumbler</h3>
+                        <p>Conçu pour la guerre. Pas pour la ville. Le Tumbler est un tank déguisé en fantôme. Il a
+                            traversé les flammes de Narrows. Il a survécu à Bane. Moi aussi.
+                        </p>
+                        <ul class="mt-4 text-sm sm:text-base">
+                            <li>
+                                <p><span>Type :</span> Véhicule blindé tactique</p>
+                            </li>
+                            <li>
+                                <p>
+                                    <soan>Vitesse max :</soan> 160 km/h
+                                </p>
+                            </li>
+                            <li>
+                                <p><span>Fonctions :</span> Saut assisté, mode furtif, lance-grenades</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="group relative block h-64 sm:h-80 lg:h-96 col-span-6">
+                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+                <div
+                    class="relative flex h-full transform items-end border-2 border-black bg-[url('./images/batwing.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
+                    <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                        <h2 class="mt-4 text-xl font-medium sm:text-2xl">Batwing</h2>
+                    </div>
+                    <div
+                        class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                        <h3 class="mt-4 text-xl font-medium sm:text-2xl">Batwing</h3>
+                        <p>Quand le ciel devient une menace, je prends de la hauteur. Le Batwing est une lame volante.
+                            Il a survolé Gotham pendant que le Joker dansait. J’ai tiré. Il a ri.
+                        </p>
+                        <ul class="mt-4 text-sm sm:text-base">
+                            <li>
+                                <p><span>Type :</span> Jet furtif</p>
+                            </li>
+                            <li>
+                                <p>
+                                    <soan>Armement :</soan> Missiles, mitrailleuses, grappin
+                                </p>
+                            </li>
+                            <li>
+                                <p><span>Technologie :</span> Stabilisation gyroscopique, IA embarquée</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <footer class="w-[90%] mx-auto grid grid-cols-12 mt-5 mb-15">
@@ -204,7 +269,8 @@
             <a class="text-right" tabindex="0">mode furtif</a>
         </div>
     </footer>
-    <script src="script/carousel.js">
+    <script type="module" src="script/script.js"></script>
+    <script src="script/accordion.js"></script>
     </script>
 </body>
 

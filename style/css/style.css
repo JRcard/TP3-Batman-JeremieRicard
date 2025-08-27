@@ -128,27 +128,6 @@ a:hover {
   padding: 8px;
 }
 
-.arsenal__titre {
-  font: 4rem "orbitron";
-  color: #00cdcd;
-  line-height: 1;
-}
-@media (max-width: 570px) {
-  .arsenal__titre {
-    font: 3.3rem "orbitron";
-    color: #00cdcd;
-    line-height: 1;
-  }
-}
-.arsenal__sousTitre {
-  font: 1.4rem "roboto";
-  color: #a9a6a6;
-  color: #00cdcd;
-  text-shadow: 0 0 5px #00fcfc;
-  transition: all 0.3s ease-out;
-  text-align: right;
-}
-
 /*Carousel*/
 .carousel {
   width: 100%;
@@ -353,4 +332,24 @@ a:hover {
     width: 300px;
     left: 20px;
   }
+}
+.arsenal__titre {
+  font: 4rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+}
+@media (max-width: 570px) {
+  .arsenal__titre {
+    font: 3.3rem "orbitron";
+    color: #00cdcd;
+    line-height: 1;
+  }
+}
+.arsenal__sousTitre {
+  font: 1.4rem "roboto";
+  color: #a9a6a6;
+  color: #00cdcd;
+  text-shadow: 0 0 5px #00fcfc;
+  transition: all 0.3s ease-out;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

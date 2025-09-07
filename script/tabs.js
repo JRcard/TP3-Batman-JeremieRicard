@@ -3,7 +3,7 @@ const btn_synchro = document.querySelector("#synchro");
 const btn_protocole = document.querySelector("#protocole");
 const btn_acces = document.querySelector("#acces");
 const btn_flux = document.querySelector("#flux");
-const btn_note = document.querySelector("#note");
+const btn_note = document.querySelector("#indice");
 
 const dialogues = document.querySelectorAll("div.tab__dialog");
 const tabs = document.querySelectorAll("a.tab__btn");
@@ -73,24 +73,22 @@ btn_flux.addEventListener("keyup", (e) => {
 		currentTab(e.target);
 	}
 });
-/* btn_note.addEventListener("click", (e) => {
-	const id = btn_note.dataset.dialogId;
-	showDialog(id);
-	currentTab(e.target);
-}); */
+btn_note.addEventListener("click", (e) => {
+	toggle(e.target);
+});
 
 const currentTab = (btn) => {
-	if (btn.classList.contains("current")) {
-		btn.classList.remove("current");
+	if (btn.classList.contains("tab__btn--current")) {
+		btn.classList.remove("tab__btn--current");
 	} else toggleCurrent(btn);
 };
 
 const toggleCurrent = (current) => {
 	tabs.forEach((btn) => {
-		if (btn.classList.contains("current")) {
-			btn.classList.remove("current");
+		if (btn.classList.contains("tab__btn--current")) {
+			btn.classList.remove("tab__btn--current");
 		}
-		current.classList.add("current");
+		current.classList.add("tab__btn--current");
 	});
 };
 const showDialog = (id) => {
@@ -107,4 +105,10 @@ const toggleDialog = (showForm) => {
 		}
 		showForm.classList.remove("hidden");
 	});
+};
+
+const toggle = (btn) => {
+	if (!btn.textContent.includes("Indice:P.3:furtif")) {
+		btn.innerHTML = "Indice:P.3:furtif";
+	} else btn.innerHTML = "As-tu tout vue?";
 };

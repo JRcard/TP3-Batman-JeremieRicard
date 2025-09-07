@@ -12,6 +12,10 @@
             
     &__sousTitre
         @extend %sousTitre
+    &__note
+        @include text_font(1.5rem, $teal )
+        @include glow-effect($cyan, $darkTurquoise)
+        
 
 .card
     &__title
@@ -28,9 +32,6 @@
         background-color: $teal
     &__tabs
         background-color: $deepBlack
-    &__dialog
-        
-
 
 .tab
     &__dialog
@@ -42,9 +43,9 @@
         color: $cyan
         :hover
             @include glow-effect($cyan, $darkTurquoise)
-
+        &--current
+            color: $teal
 .dialog
-    
     &__txt
         font-family: "roboto"
         font-size: 1.3rem
@@ -60,8 +61,7 @@
     &--list
         &--title
             color: $brightGray
-
-.current
-    color: $teal
-
+.acces-denied
+    cursor: not-allowed
+        
 

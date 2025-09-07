@@ -49,10 +49,17 @@ p {
 a {
   font: 1.2rem "roboto";
   color: #a9a6a6;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: transparent;
   transition: all 0.6s ease-out;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration-color: #00fcfc;
+}
+a:active {
+  color: #007e80;
 }
 
 .arsenal__titre,
@@ -96,6 +103,10 @@ a:hover {
   top: -5px;
 }
 
+.current {
+  color: #007e80;
+}
+
 .divider {
   max-width: 100%;
   height: 2px;
@@ -117,6 +128,14 @@ a:hover {
   position: absolute;
   width: 1px;
   word-wrap: normal !important;
+}
+
+.secret {
+  color: transparent;
+  transition: all 0.3s ease-in;
+}
+.secret:hover {
+  color: #00fcfc;
 }
 
 .presentation__texte--emphase {
@@ -337,7 +356,7 @@ a:hover {
   }
 }
 @media screen and (max-width: 690px) {
-  header nav {
+  header nav a {
     font-size: 14px;
     margin-right: 0;
   }
@@ -358,6 +377,15 @@ a:hover {
     left: 20px;
   }
 }
+.arsenal__note,
+.vehicle__note {
+  font: 1.5rem "roboto";
+  color: #007e80;
+  color: #00fcfc;
+  text-shadow: 0 0 5px #00cdcd;
+  transition: all 0.3s ease-out;
+}
+
 .card__title {
   color: #00fcfc;
 }
@@ -375,6 +403,7 @@ a:hover {
 .systemeUI__tabs {
   background-color: #0d0d0d;
 }
+
 .tab__dialog {
   border-left: 3px solid #0d0d0d;
   min-height: 170px;
@@ -387,6 +416,9 @@ a:hover {
   color: #00fcfc;
   text-shadow: 0 0 5px #00cdcd;
   transition: all 0.3s ease-out;
+}
+.tab__btn--current {
+  color: #007e80;
 }
 
 .dialog__txt {
@@ -406,6 +438,6 @@ a:hover {
   color: #a9a6a6;
 }
 
-.current {
-  color: #007e80;
+.acces-denied {
+  cursor: not-allowed;
 }/*# sourceMappingURL=style.css.map */

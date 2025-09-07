@@ -24,7 +24,7 @@
                 <ul class="menu__list flex justify-end items-center col-span-4 col-start-9">
                     <li class="menu__item text-right"><a href="index.html">Dossier personnel</a>
                     </li>
-                    <li class="menu__item text-right"><a href="arsenal.html" aria-current="page">Arsenal
+                    <li class="menu__item text-right"><a class="current" href="arsenal.html" aria-current="page">Arsenal
                             technologique</a></li>
                     <li class="menu__item text-right"><a href="reseau&allies.html">Réseaux & Alliés</a></li>
                 </ul>
@@ -521,45 +521,53 @@
         <div class="divider"></div>
         <section>
             <div class="col-span-12 grid grid-cols-12 mb-10">
-                <h1 class="vehicle__titre col-span-12 text-right mt-20">Entrée #006 - Système central</h1>
+                <h1 class="vehicle__titre col-span-12 text-right mb-10 mt-20">Entrée #006 - Système central</h1>
+                <h2 class="arsenal__sousTitre col-span-12 lg:col-span-6 lg:col-start-7">
+                    Le système ne ment pas. Il ne juge pas. Il archive.
+                    Chaque battement de coeur. Chaque cri. Chaque silence.
+                    Je suis seul. Mais je ne suis jamais sans données.
+                </h2>
             </div>
 
             <!-- tailwind component: Inspiré de: https://tailgrids.com/components/tabs 
                     le CDN entrait en conflit avec tailwind mais je voulais garder le concept. -->
 
             <div
-                class="systemeUI grid grid-cols-12 pb-16 pt-8 rounded-lg border border-[#00fcfc] px-4 py-3 min-h-[300px]">
-                <div class="systemeUI__screen col-span-12 rounded-lg border border-[#00fcfc] px-4 py-3 min-h-[300px]">
-                    <div
-                        class="systemeUI__tabs grid grid-cols-12 rounded-lg border border-[#00fcfc] px-4 py-3 sm:flex-row">
+                class="systemeUI grid grid-rows-6 grid-cols-12 pb-16 pt-8 rounded-lg border border-[#00fcfc] px-4 py-3">
+                <div class="systemeUI__screen col-span-12 rounded-lg border border-[#00fcfc] px-4 py-3 ">
+                    <div class="systemeUI__tabs grid grid-rows-6 rounded-lg border border-[#00fcfc] px-4 py-3">
                         <a id="statut" data-dialog-id="1"
-                            class="tab__btn col-span-2 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6"
+                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6"
                             tabindex="0">
                             Statut
                         </a>
                         <a id="synchro" data-dialog-id="2"
-                            class="tab__btn col-span-2 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
+                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
                             tabindex="0">
                             Dernière synchronisation
                         </a>
                         <a id="protocole" data-dialog-id="3"
-                            class="tab__btn col-span-2 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
+                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
                             tabindex="0">
                             Protocole actif
                         </a>
                         <a id="acces" data-dialog-id="4"
-                            class="tab__btn col-span-2 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
+                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
                             tabindex="0">
                             Niveau d’accès
                         </a>
                         <a id="flux" data-dialog-id="5"
-                            class="tab__btn col-span-2 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
+                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
                             tabindex="0">
                             Flux de données
                         </a>
+                        <a id="indice" data-dialog-id="6"
+                            class="secret row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6"
+                            tabindex="0">
+                            As-tu tout vue?</a>
                     </div>
 
-                    <div class="systemeUI__dialog grid grid-cols-12">
+                    <div class="systemeUI__dialog grid grid-cols-12 col-span-9">
                         <div id="1" class="tab__dialog col-span-2 p-6 hidden">
                             <p class="dialog__txt">OPÉRATIONNEL</p>
                         </div>
@@ -598,6 +606,9 @@
                     </div>
 
                 </div>
+            </div>
+            <div class="mt-5">
+                <p>Prochain protocole : INITIATION PAGE 3 – <a class="tab__btn acces-denied">Réseau & Alliés</a></p>
             </div>
         </section>
     </main>

@@ -238,7 +238,7 @@ a:hover {
 }
 .content__des {
   font: 1.2rem "roboto";
-  color: #fff;
+  color: #fafafa;
   opacity: 0;
   animation: animate 1s ease-in-out 0.9s 1 forwards;
 }
@@ -250,7 +250,7 @@ a:hover {
 }
 .content__list-02 {
   font: 1.5rem "roboto";
-  color: #fff;
+  color: #fafafa;
   opacity: 0;
   animation: animate 1s ease-in-out 1.5s 1 forwards;
   margin-left: 35px;
@@ -366,7 +366,44 @@ a:hover {
 }
 
 .item__title {
-  color: #fff;
+  color: #fafafa;
+}
+
+.systemeUI__screen {
+  background-color: #007e80;
+}
+.systemeUI__tabs {
+  background-color: #0d0d0d;
+}
+.tab__dialog {
+  border-left: 3px solid #0d0d0d;
+  min-height: 170px;
+}
+.tab__btn {
+  cursor: pointer;
+  color: #00fcfc;
+}
+.tab__btn :hover {
+  color: #00fcfc;
+  text-shadow: 0 0 5px #00cdcd;
+  transition: all 0.3s ease-out;
+}
+
+.dialog__txt {
+  font-family: "roboto";
+  font-size: 1.3rem;
+  color: #0d0d0d;
+  font-weight: 900;
+}
+.dialog__txt--list {
+  font-family: "roboto";
+  font-size: 1.2rem;
+  color: #0d0d0d;
+  font-weight: 900;
+}
+
+.txt--list--title {
+  color: #a9a6a6;
 }
 
 .current {

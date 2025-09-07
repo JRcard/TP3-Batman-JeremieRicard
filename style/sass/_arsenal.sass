@@ -23,6 +23,45 @@
     &__title
         color: $purWhite
 
+.systemeUI
+    &__screen
+        background-color: $teal
+    &__tabs
+        background-color: $deepBlack
+    &__dialog
+        
+
+
+.tab
+    &__dialog
+        border-left: 3px solid $deepBlack
+        min-height: 170px
+        
+    &__btn
+        cursor: pointer
+        color: $cyan
+        :hover
+            @include glow-effect($cyan, $darkTurquoise)
+
+.dialog
+    
+    &__txt
+        font-family: "roboto"
+        font-size: 1.3rem
+        color:$deepBlack
+        font-weight: 900
+        
+        &--list
+            font-family: "roboto"
+            font-size: 1.2rem
+            color:$deepBlack
+            font-weight: 900
+.txt
+    &--list
+        &--title
+            color: $brightGray
+
 .current
     color: $teal
+
 

@@ -9,36 +9,75 @@ const dialogues = document.querySelectorAll("div.tab__dialog");
 const tabs = document.querySelectorAll("a.tab__btn");
 
 btn_statut.addEventListener("click", (e) => {
-	console.log(e.target);
 	const id = btn_statut.dataset.dialogId;
 	showDialog(id);
 	currentTab(e.target);
+});
+btn_statut.addEventListener("keyup", (e) => {
+	// You can check for a specific key if needed, e.g., the Enter key (keyCode 13)
+	if (e.keyCode === 13) {
+		const id = btn_statut.dataset.dialogId;
+		showDialog(id);
+		currentTab(e.target);
+	}
 });
 btn_synchro.addEventListener("click", (e) => {
 	const id = btn_synchro.dataset.dialogId;
 	showDialog(id);
 	currentTab(e.target);
 });
+btn_synchro.addEventListener("keyup", (e) => {
+	// You can check for a specific key if needed, e.g., the Enter key (keyCode 13)
+	if (e.keyCode === 13) {
+		const id = btn_synchro.dataset.dialogId;
+		showDialog(id);
+		currentTab(e.target);
+	}
+});
 btn_protocole.addEventListener("click", (e) => {
 	const id = btn_protocole.dataset.dialogId;
 	showDialog(id);
 	currentTab(e.target);
+});
+btn_protocole.addEventListener("keyup", (e) => {
+	// You can check for a specific key if needed, e.g., the Enter key (keyCode 13)
+	if (e.keyCode === 13) {
+		const id = btn_protocole.dataset.dialogId;
+		showDialog(id);
+		currentTab(e.target);
+	}
 });
 btn_acces.addEventListener("click", (e) => {
 	const id = btn_acces.dataset.dialogId;
 	showDialog(id);
 	currentTab(e.target);
 });
+btn_acces.addEventListener("keyup", (e) => {
+	// You can check for a specific key if needed, e.g., the Enter key (keyCode 13)
+	if (e.keyCode === 13) {
+		const id = btn_acces.dataset.dialogId;
+		showDialog(id);
+		currentTab(e.target);
+	}
+});
 btn_flux.addEventListener("click", (e) => {
 	const id = btn_flux.dataset.dialogId;
 	showDialog(id);
 	currentTab(e.target);
 });
-btn_note.addEventListener("click", (e) => {
+btn_flux.addEventListener("keyup", (e) => {
+	// You can check for a specific key if needed, e.g., the Enter key (keyCode 13)
+	if (e.keyCode === 13) {
+		const id = btn_flux.dataset.dialogId;
+		showDialog(id);
+		currentTab(e.target);
+	}
+});
+/* btn_note.addEventListener("click", (e) => {
 	const id = btn_note.dataset.dialogId;
 	showDialog(id);
 	currentTab(e.target);
-});
+}); */
 
 const currentTab = (btn) => {
 	if (btn.classList.contains("current")) {

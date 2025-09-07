@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style/css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- stylesheet -->
     <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
-    <!-- script -->
-    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/css/style.css">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="description" content="Bat-ordinateur: dossier #000, page 2: Arsenal technologique">
@@ -33,7 +31,7 @@
             </nav>
         </div>
     </header>
-    <main class="max-w-[1900px] lg:w-[90%] lg:mx-auto" id="main">
+    <main class="max-w-[1900px] w-[95%] md:w-[90%] mx-auto" id="main">
         <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
         <section class="mb-15 grid grid-cols-12">
             <div class="col-span-12 grid grid-cols-12 mb-10">
@@ -47,7 +45,7 @@
             </div>
 
             <div class="col-span-12">
-                <!-- https://codepen.io/leonam-silva-de-souza/pen/XJbYJPK -->
+                <!--  https://codepen.io/leonam-silva-de-souza/pen/XJbYJPK -->
                 <div class="carousel">
                     <div class="carousel__list">
                         <div class="carousel__item bg-[url(./images/arsenal_batarang.jpg)] bg-position-[65%]">
@@ -192,72 +190,396 @@
             </div>
         </section>
         <div class="divider"></div>
-        <section class="vehicle grid grid-cols-12 gap-6">
+        <section class="vehicle grid grid-cols-12 gap-6 mb-10">
             <div class="col-span-12 grid grid-cols-12 mb-10">
                 <h1 class="vehicle__titre col-span-12 text-right mb-10 mt-20">Entrée #005 - Véhicules</h1>
                 <h2 class="vehicle__sousTitre col-span-12 lg:col-span-6 lg:col-start-7">Chaque machine est une
                     extension de ma volonté. Elles ne sont pas belles. Elles sont nécessaires.</h2>
             </div>
-            <!-- https://www.hyperui.dev/components/marketing/cards?codeType=html&isRtl=false&previewWidth=100%25#component-5 -->
-            <div class="vehicle_card group relative block h-64 sm:h-80 lg:h-96 col-span-6">
-                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+            <!-- tailwind component:  https://www.hyperui.dev/components/marketing/cards?codeType=html&isRtl=false&previewWidth=100%25#component-5 -->
+            <!-- Batmobil -->
+
+            <button command="show-modal" commandfor="dialog-batmobil"
+                class="vehicle__card group relative block h-64 sm:h-80 lg:h-96 col-span-12 lg:col-span-6">
+                <span class="absolute inset-0 border-2 border-dashed border-[#00fcfc]"></span>
                 <div
-                    class="relative flex h-full transform items-end border-2 border-black bg-[url('./images/Tumbler_resized.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
+                    class="relative flex h-full text-left transform items-end border-2 border-[#00fcfc] bg-[url('./images/Batmobile-crop.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
                     <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                        <h2 class="mt-4 text-xl font-medium sm:text-2xl">Tumbler</h2>
+                        <h2 class="card__title mt-4 text-xl font-medium sm:text-2xl">Batmobile</h2>
                     </div>
                     <div
-                        class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
-                        <h3 class="mt-4 text-xl font-medium sm:text-2xl">Tumbler</h3>
-                        <p>Conçu pour la guerre. Pas pour la ville. Le Tumbler est un tank déguisé en fantôme. Il a
-                            traversé les flammes de Narrows. Il a survécu à Bane. Moi aussi.
-                        </p>
-                        <ul class="mt-4 text-sm sm:text-base">
-                            <li>
-                                <p><span>Type :</span> Véhicule blindé tactique</p>
+                        class="absolute h-[100%] p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Batmobile</h3>
+                        <p class="card__txt pb-10">Quand les dieux tombent sur Terre, il faut une machine qui
+                            encaisse.
+                            Cette Batmobile est un monstre. Elle a roulé sur Parademons. Elle a survécu à Apokolips.
+                            Moi
+                            aussi.</p>
+                        <ul class="card__list text-sm sm:text-base">
+                            <li class="list__item">
+                                <p><span class="item__title">Type</span> : <span class="item__txt italic">Intercepteur
+                                        lourd</span></p>
                             </li>
                             <li>
-                                <p>
-                                    <soan>Vitesse max :</soan> 160 km/h
-                                </p>
+                                <p><span class="item__title">Armement</span> : <span class="italic">Canon rotatif,
+                                        missiles, tourelle</span></p>
                             </li>
                             <li>
-                                <p><span>Fonctions :</span> Saut assisté, mode furtif, lance-grenades</p>
+                                <p><span class="item__title">Technologie</span> : <span class="italic">IA de combat,
+                                        blindage réactif</span></p>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="group relative block h-64 sm:h-80 lg:h-96 col-span-6">
-                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+            </button>
+
+
+            <!-- Batwing -->
+            <button command="show-modal" commandfor="dialog-batwing"
+                class="vehicle__card group relative block h-64 sm:h-80 lg:h-96 col-span-12 lg:col-span-6">
+                <span class="absolute inset-0 border-2 border-dashed border-[#00fcfc]"></span>
                 <div
-                    class="relative flex h-full transform items-end border-2 border-black bg-[url('./images/batwing.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
+                    class="relative flex h-full text-left transform items-end border-2 border-[#00fcfc] bg-[url('./images/batwing.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
                     <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                        <h2 class="mt-4 text-xl font-medium sm:text-2xl">Batwing</h2>
+                        <h2 class="card__title mt-4 text-xl font-medium sm:text-2xl">Batwing</h2>
                     </div>
                     <div
-                        class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
-                        <h3 class="mt-4 text-xl font-medium sm:text-2xl">Batwing</h3>
-                        <p>Quand le ciel devient une menace, je prends de la hauteur. Le Batwing est une lame volante.
-                            Il a survolé Gotham pendant que le Joker dansait. J’ai tiré. Il a ri.
+                        class="absolute h-[100%] p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Batwing</h3>
+                        <p class="card__txt pb-10">Quand le ciel devient une menace, je prends de la hauteur. Le Batwing
+                            est une lame volante. Il a survolé Gotham pendant que le Joker dansait. J’ai tiré. Il a ri.
                         </p>
-                        <ul class="mt-4 text-sm sm:text-base">
-                            <li>
-                                <p><span>Type :</span> Jet furtif</p>
+                        <ul class="card__list text-sm sm:text-base">
+                            <li class="list__item">
+                                <p><span class="item__title">Type</span> : <span class="item__txt italic">Jet
+                                        furtif</span></p>
                             </li>
                             <li>
-                                <p>
-                                    <soan>Armement :</soan> Missiles, mitrailleuses, grappin
-                                </p>
+                                <p><span class="item__title">Armement</span> : <span class="italic">Missiles,
+                                        mitrailleuses, grappin</span></p>
                             </li>
                             <li>
-                                <p><span>Technologie :</span> Stabilisation gyroscopique, IA embarquée</p>
+                                <p><span class="item__title">Technologie</span> : <span class="italic">Stabilisation
+                                        gyroscopique, IA embarquée</span></p>
                             </li>
                         </ul>
                     </div>
                 </div>
+            </button>
+
+            <!-- Tumbler -->
+            <button command="show-modal" commandfor="dialog-tumbler"
+                class="vehicle__card group relative block h-64 sm:h-80 lg:h-96 col-span-12 lg:col-span-6">
+                <span class="absolute inset-0 border-2 border-dashed border-[#00fcfc]"></span>
+                <div
+                    class="relative flex h-full text-left transform items-end border-2 border-[#00fcfc] bg-[url('./images/Tumbler_resized.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
+                    <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                        <h2 class="card__title mt-4 text-xl font-medium sm:text-2xl">Tumbler</h2>
+                    </div>
+                    <div
+                        class="absolute h-[100%] p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Tumbler</h3>
+                        <p class="card__txt pb-10">Conçu pour la guerre. Pas pour la ville. Le Tumbler est un tank
+                            déguisé en fantôme. Il a traversé les flammes de Narrows. Il a survécu à Bane. Moi aussi.
+                        </p>
+                        <ul class="card__list text-sm sm:text-base">
+                            <li class="list__item">
+                                <p><span class="item__title">Type</span> : <span class="item__txt italic">Véhicule
+                                        blindé tactique</span></p>
+                            </li>
+                            <li>
+                                <p><span class="item__title">Vitesse max</span> : <span class="italic">160 km/h</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p><span class="item__title">Fonctions</span> : <span class="italic">Saut assisté, mode
+                                        furtif, lance-grenades</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Batcycle -->
+            <button command="show-modal" commandfor="dialog-batcycle" class="vehicle__card group relative block h-64
+                sm:h-80 lg:h-96 col-span-12 lg:col-span-6">
+                <span class="absolute inset-0 border-2 border-dashed border-[#00fcfc]"></span>
+                <div
+                    class="relative flex h-full text-left transform items-end border-2 border-[#00fcfc] bg-[url('./images/batcycle-crop.jpg')] bg-center transition-transform group-hover:bg-none group-hover:bg-[#303030] group-hover:-translate-x-2 group-hover:-translate-y-2">
+                    <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                        <h2 class="card__title mt-4 text-xl font-medium sm:text-2xl">Batcycle</h2>
+                    </div>
+                    <div
+                        class="absolute h-[100%] p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Batcycle</h3>
+                        <p class="card__txt pb-10">La ville est trop étroite pour les monstres. Le Batcycle est rapide,
+                            silencieux, mortel. Je l’ai utilisé pour fuir les sirènes. Et pour les précéder.</p>
+                        <ul class="card__list text-sm sm:text-base">
+                            <li class="list__item">
+                                <p><span class="item__title">Type</span> : <span class="item__txt italic">Moto
+                                        tactique</span></p>
+                            </li>
+                            <li>
+                                <p><span class="item__title">Vitesse max</span> : <span class="italic">220 km/h</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p><span class="item__title">Modules</span> : <span class="italic">GPS crypté, lame
+                                        rétractable, silencieux</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </button>
+            <!-- MODALES - dialogBoxes -->
+            <!--tailwind component: https://tailwindcss.com/plus/ui-blocks/application-ui/overlays/modal-dialogs-->
+            <el-dialog class="col-span-1">
+                <dialog id="dialog-batmobil" aria-labelledby="dialog-title"
+                    class=" inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                    <el-dialog-backdrop
+                        class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+                    <div tabindex="0"
+                        class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+                        <el-dialog-panel
+                            class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                            <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <div class="sm:flex sm:items-start">
+                                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Batmobile</h3>
+                                        <p class="card__txt pb-10">Quand les dieux tombent sur Terre, il faut une
+                                            machine qui encaisse.
+                                            Cette Batmobile est un monstre. Elle a roulé sur Parademons. Elle a survécu
+                                            à Apokolips. Moi
+                                            aussi.</p>
+                                        <ul class="card__list text-sm sm:text-base">
+                                            <li class="list__item">
+                                                <p><span class="item__title">Type</span> : <span
+                                                        class="item__txt italic">Intercepteur
+                                                        lourd</span></p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Armement</span> : <span
+                                                        class="italic">Canon rotatif,
+                                                        missiles, tourelle</span></p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Technologie</span> : <span
+                                                        class="italic">IA de combat,
+                                                        blindage réactif</span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                                <button type="button" command="close" commandfor="dialog-batmobil"
+                                    class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+            <el-dialog class="col-span-1">
+                <dialog id="dialog-batwing" aria-labelledby="dialog-title"
+                    class="fixed inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                    <el-dialog-backdrop
+                        class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+                    <div tabindex="0"
+                        class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+                        <el-dialog-panel
+                            class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                            <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <div class="sm:flex sm:items-start">
+                                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Batwing</h3>
+                                        <p class="card__txt pb-10">Quand le ciel devient une menace, je prends de la
+                                            hauteur. Le Batwing
+                                            est une lame volante. Il a survolé Gotham pendant que le Joker dansait. J’ai
+                                            tiré. Il a ri.
+                                        </p>
+                                        <ul class="card__list text-sm sm:text-base">
+                                            <li class="list__item">
+                                                <p><span class="item__title">Type</span> : <span
+                                                        class="item__txt italic">Jet
+                                                        furtif</span></p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Armement</span> : <span
+                                                        class="italic">Missiles,
+                                                        mitrailleuses, grappin</span></p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Technologie</span> : <span
+                                                        class="italic">Stabilisation
+                                                        gyroscopique, IA embarquée</span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                                <button type="button" command="close" commandfor="dialog-batwing"
+                                    class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+            <el-dialog class="col-span-1">
+                <dialog id="dialog-tumbler" aria-labelledby="dialog-title"
+                    class="fixed inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                    <el-dialog-backdrop
+                        class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+                    <div tabindex="0"
+                        class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+                        <el-dialog-panel
+                            class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                            <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <div class="sm:flex sm:items-start">
+                                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Tumbler</h3>
+                                        <p class="card__txt pb-10">Conçu pour la guerre. Pas pour la ville. Le Tumbler
+                                            est un tank
+                                            déguisé en fantôme. Il a traversé les flammes de Narrows. Il a survécu à
+                                            Bane. Moi aussi.
+                                        </p>
+                                        <ul class="card__list text-sm sm:text-base">
+                                            <li class="list__item">
+                                                <p><span class="item__title">Type</span> : <span
+                                                        class="item__txt italic">Véhicule
+                                                        blindé tactique</span></p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Vitesse max</span> : <span
+                                                        class="italic">160 km/h</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Fonctions</span> : <span
+                                                        class="italic">Saut assisté, mode
+                                                        furtif, lance-grenades</span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                                <button type="button" command="close" commandfor="dialog-tumbler"
+                                    class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+            <el-dialog class="col-span-1">
+                <dialog id="dialog-batcycle" aria-labelledby="dialog-title"
+                    class="fixed inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                    <el-dialog-backdrop
+                        class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+                    <div tabindex="0"
+                        class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+                        <el-dialog-panel
+                            class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                            <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <div class="sm:flex sm:items-start">
+                                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                        <h3 class="card__title pb-10 text-xl font-medium sm:text-2xl">Batcycle</h3>
+                                        <p class="card__txt pb-10">La ville est trop étroite pour les monstres. Le
+                                            Batcycle est rapide,
+                                            silencieux, mortel. Je l’ai utilisé pour fuir les sirènes. Et pour les
+                                            précéder.</p>
+                                        <ul class="card__list text-sm sm:text-base">
+                                            <li class="list__item">
+                                                <p><span class="item__title">Type</span> : <span
+                                                        class="item__txt italic">Moto
+                                                        tactique</span></p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Vitesse max</span> : <span
+                                                        class="italic">220 km/h</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><span class="item__title">Modules</span> : <span class="italic">GPS
+                                                        crypté, lame
+                                                        rétractable, silencieux</span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                                <button type="button" command="close" commandfor="dialog-batcycle"
+                                    class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+        </section>
+        <div class="divider"></div>
+        <section>
+            <div class="col-span-12 grid grid-cols-12 mb-10">
+                <h1 class="vehicle__titre col-span-12 text-right mt-20">Entrée #006 - Système central</h1>
             </div>
 
+            <!-- tailwind component: Inspiré de: https://tailgrids.com/components/tabs 
+                    le CDN entrait en conflit avec tailwind mais je voulais garder le concept. -->
+
+            <div class="grid grid-cols-12 py-16">
+                <div class="col-span-12 rounded-lg border border-[#E4E4E4] px-4 py-3 ">
+                    <div>
+                        <div
+                            class="flex flex-col flex-wrap justify-center rounded-lg border border-[#E4E4E4] px-4 py-3 sm:flex-row">
+                            <a id="statut" class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6">
+                                Statut
+                            </a>
+                            <a id="synchro"
+                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                                Dernière synchronisation
+                            </a>
+                            <a id="synchro"
+                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                                Protocole actif
+                            </a>
+                            <a id="synchro"
+                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                                Niveau d’accès
+                            </a>
+                            <a id="synchro"
+                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                                Flux de données
+                            </a>
+                            <a id="synchro"
+                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                                Note système
+                            </a>
+                        </div>
+
+                        <div>
+                            <div id="1" class="p-6">
+                                <p>OPÉRATIONNEL</p>
+                            </div>
+                            <div id="2" class="p-6">
+                                <p>
+                                    derniere synchro
+                                </p>
+                            </div>
+                            <div id="3" class="p-6">
+                                <p>
+                                    protocol actif:
+                                </p>
+                            </div>
+                            <div id="4" class="p-6">
+                                <p>
+                                    niveau d'accès
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -269,6 +591,9 @@
             <a class="text-right" tabindex="0">mode furtif</a>
         </div>
     </footer>
+    <!-- script -->
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="script/script.js"></script>
     <script src="script/accordion.js"></script>
     </script>

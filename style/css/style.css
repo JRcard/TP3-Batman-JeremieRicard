@@ -357,4 +357,14 @@ a:hover {
     width: 300px;
     left: 20px;
   }
+}
+.card__title {
+  color: #00fcfc;
+}
+.card__txt {
+  color: #00cdcd;
+}
+
+.item__title {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

@@ -367,4 +367,8 @@ a:hover {
 
 .item__title {
   color: #fff;
+}
+
+.current {
+  color: #007e80;
 }/*# sourceMappingURL=style.css.map */

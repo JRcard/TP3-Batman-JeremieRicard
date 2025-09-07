@@ -1,5 +1,4 @@
 import { setupAudioPlayer } from "./audio_player.js";
-import "./carousel.js";
 
 /* AUDIO PLAYERS  */
 /* audio-003-A */

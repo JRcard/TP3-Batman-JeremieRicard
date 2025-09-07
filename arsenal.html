@@ -528,50 +528,51 @@
                     le CDN entrait en conflit avec tailwind mais je voulais garder le concept. -->
 
             <div class="grid grid-cols-12 py-16">
-                <div class="col-span-12 rounded-lg border border-[#E4E4E4] px-4 py-3 ">
+                <div class="col-span-12 rounded-lg border border-[#E4E4E4] px-4 py-3 min-h-[300px]">
                     <div>
                         <div
                             class="flex flex-col flex-wrap justify-center rounded-lg border border-[#E4E4E4] px-4 py-3 sm:flex-row">
-                            <a id="statut" class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6">
+                            <a id="statut" data-dialog-id="1"
+                                class="tab__btn rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6">
                                 Statut
                             </a>
-                            <a id="synchro"
-                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                            <a id="synchro" data-dialog-id="2"
+                                class="tab__btn rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
                                 Dernière synchronisation
                             </a>
-                            <a id="protocole"
-                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                            <a id="protocole" data-dialog-id="3"
+                                class="tab__btn rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
                                 Protocole actif
                             </a>
-                            <a id="acces"
-                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                            <a id="acces" data-dialog-id="4"
+                                class="tab__btn rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
                                 Niveau d’accès
                             </a>
-                            <a id="flux"
-                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                            <a id="flux" data-dialog-id="5"
+                                class="tab__btn rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
                                 Flux de données
                             </a>
-                            <a id="note"
-                                class="rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
+                            <a id="note" data-dialog-id="6"
+                                class="tab__btn rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color">
                                 Note système
                             </a>
                         </div>
 
                         <div>
-                            <div id="1" class="p-6">
+                            <div id="1" class="tab__dialog p-6 hidden">
                                 <p>OPÉRATIONNEL</p>
                             </div>
-                            <div id="2" class="p-6">
+                            <div id="2" class="tab__dialog p-6 hidden">
                                 <p>
                                     derniere synchro
                                 </p>
                             </div>
-                            <div id="3" class="p-6">
+                            <div id="3" class="tab__dialog p-6 hidden">
                                 <p>
                                     protocol actif:
                                 </p>
                             </div>
-                            <div id="4" class="p-6">
+                            <div id="4" class="tab__dialog p-6 hidden">
                                 <p>
                                     niveau d'accès
                                 </p>
@@ -594,8 +595,8 @@
     <!-- script -->
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script type="module" src="script/script.js"></script>
-    <script src="script/accordion.js"></script>
+    <script src="script/carousel.js"></script>
+    <script src="script/tabs.js"></script>
     </script>
 </body>
 

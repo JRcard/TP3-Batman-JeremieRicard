@@ -70,9 +70,27 @@
     display: inline-block
     cursor: pointer
     transition: background-color color 0.3s ease
-    &:hover 
-        color: $deepBlack
-        background-color: $cyan
+    &:hover
+        animation: terminal-glitch .4s
+    
+
+@keyframes terminal-glitch 
+    0% 
+        text-shadow: 3px 4px $gray, -3px -4px $teal
+    
+    25% 
+        text-shadow: -3px -4px $cyan, 3px 4px $brightGray
+    
+    50% 
+        text-shadow: 3px 4px $brightGray, -6px 4px $purWhite
+    
+    75% 
+        text-shadow: -6px -4px $cyan, -3px -4px $teal
+    
+    100% 
+        text-shadow: -3px 0 $gray, 3px -4px $brightGray
+    
+    
 
         
 

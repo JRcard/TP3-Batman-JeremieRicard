@@ -451,6 +451,23 @@ a:active {
   transition: background-color color 0.3s ease;
 }
 .terminal-button:hover {
-  color: #0d0d0d;
-  background-color: #00fcfc;
+  animation: terminal-glitch 0.4s;
+}
+
+@keyframes terminal-glitch {
+  0% {
+    text-shadow: 3px 4px #7a7a7a, -3px -4px #007e80;
+  }
+  25% {
+    text-shadow: -3px -4px #00fcfc, 3px 4px #a9a6a6;
+  }
+  50% {
+    text-shadow: 3px 4px #a9a6a6, -6px 4px #fafafa;
+  }
+  75% {
+    text-shadow: -6px -4px #00fcfc, -3px -4px #007e80;
+  }
+  100% {
+    text-shadow: -3px 0 #7a7a7a, 3px -4px #a9a6a6;
+  }
 }/*# sourceMappingURL=style.css.map */

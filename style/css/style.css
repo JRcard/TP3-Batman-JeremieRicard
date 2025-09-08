@@ -441,4 +441,16 @@ a:active {
 
 .txt--list--title {
   color: #a9a6a6;
+}
+
+.terminal-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ffff;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color color 0.3s ease;
+}
+.terminal-button:hover {
+  color: #0d0d0d;
+  background-color: #00fcfc;
 }/*# sourceMappingURL=style.css.map */

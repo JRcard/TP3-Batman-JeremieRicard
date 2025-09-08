@@ -8,13 +8,23 @@
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="service-worker.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="description" content="Bat-ordinateur: dossier #000, page 1: Présentation">
     <title>Dossier personnel</title>
 </head>
+<script>
+    // Register service worker.
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("service-worker.js").then((reg) => {
+                console.log("Service worker registered.", reg);
+            });
+        });
+    }
+</script>
 
 <body class="max-w-[1900px] w-[90%] mx-auto">
     <header>
@@ -36,7 +46,7 @@
         <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
         <section class="presentation mb-15">
             <h2 class="text-right mb-10 mt-20">Entrée #001 - Présentation</h2>
-            <div class="w-[80%] mx-auto grid grid-cols-12 my-[100px]">
+            <div class="w-[80%] mx-auto grid grid-cols-12 my-[200px]">
                 <div class="col-span-6 flex flex-col justify-center">
                     <p class="presentation__texte">Je suis né dans le chaos.</p>
                     <p>Pas celui qu’on montre aux infos. Le vrai.</p>
@@ -63,19 +73,21 @@
                     <h2 class="pb-15">BATMAN</h2>
 
                 </div>
-                <div class="col-span-6 my-[100px]"><img class="w-[60%] rounded-xl ml-auto" src="images/Batman.jpg"
+                <!-- <div class="col-span-6 my-[100px]"><img class="w-[60%] rounded-xl ml-auto" src="images/Batman.jpg"
                         alt="Batman">
-                </div>
-                <!-- fonctionnel, reste le responsive
-                <div class="group relative col-span-6 col-start-8 ">
-                    <div class="absolute -top-10 left-5 group-hover:opacity-0"><img class="w-[80%] rounded-xl"
-                            src="images/Batman.jpg" alt="Batman">
+                </div> -->
+                <!-- fonctionnel, reste le responsive -->
+                <div class="group relative col-span-6 ">
+                    <div
+                        class="absolute -top-10 left-5 ml-25 transition-opacity delay-300 duration-800 group-hover:opacity-0">
+                        <img class="rounded-xl w-[80%]" src="images/Batman.jpg" alt="Batman">
                     </div>
-                    <div class="opacity-0 absolute -top-10 left-5 group-hover:opacity-100">
+                    <div
+                        class="opacity-0 absolute -top-10 left-5 ml-25 transition-opacity delay-300 duration-800 group-hover:opacity-100">
                         <img class="rounded-xl w-[80%]" src="images/BruceWayne.jpg" alt="Batman">
 
                     </div>
-                </div> -->
+                </div>
             </div>
             <div class="divider"></div>
         </section>
@@ -184,6 +196,7 @@
         </div>
     </footer>
     <script type="module" src="script/script.js"></script>
+    <script src="service-worker.js"></script>
     <!-- <script src="script/audio_player.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>

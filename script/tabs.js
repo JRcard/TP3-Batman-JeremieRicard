@@ -108,7 +108,7 @@ const toggleDialog = (showForm) => {
 };
 
 const toggle = (btn) => {
-	if (!btn.textContent.includes("Indice:P.3:furtif")) {
-		btn.innerHTML = "Indice:P.3:furtif";
+	if (!btn.textContent.includes("Indice:P.3: furtif")) {
+		btn.innerHTML = "Indice:P.3: furtif";
 	} else btn.innerHTML = "As-tu tout vue?";
 };

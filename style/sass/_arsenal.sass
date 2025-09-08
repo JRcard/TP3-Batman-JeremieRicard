@@ -36,7 +36,9 @@
 .tab
     &__dialog
         border-left: 3px solid $deepBlack
-        min-height: 170px
+        min-height: 130px
+        @include responsive(1280px)
+            min-height: 215px
         
     &__btn
         cursor: pointer
@@ -61,7 +63,6 @@
     &--list
         &--title
             color: $brightGray
-.acces-denied
-    cursor: not-allowed
+
         
 

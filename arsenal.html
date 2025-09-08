@@ -532,62 +532,58 @@
             <!-- tailwind component: Inspiré de: https://tailgrids.com/components/tabs 
                     le CDN entrait en conflit avec tailwind mais je voulais garder le concept. -->
 
-            <div
-                class="systemeUI grid grid-rows-6 grid-cols-12 pb-16 pt-8 rounded-lg border border-[#00fcfc] px-4 py-3">
-                <div class="systemeUI__screen col-span-12 rounded-lg border border-[#00fcfc] px-4 py-3 ">
-                    <div class="systemeUI__tabs grid grid-rows-6 rounded-lg border border-[#00fcfc] px-4 py-3">
+            <div class="systemeUI pb-16 pt-8 rounded-lg border border-[#00fcfc] px-4 py-3">
+                <div
+                    class="systemeUI__screen rounded-lg border border-[#00fcfc] px-4 py-3 min-h-[345px] xl:min-h-[210px]">
+                    <div class="systemeUI__tabs grid grid-cols-12 text-left rounded-lg border border-[#00fcfc] py-3">
                         <a id="statut" data-dialog-id="1"
-                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6"
+                            class="tab__btn rounded-md col-span-6 lg:col-span-4 xl:col-span-1 text-sm font-medium md:text-base px-6"
                             tabindex="0">
                             Statut
                         </a>
                         <a id="synchro" data-dialog-id="2"
-                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
+                            class="tab__btn rounded-md col-span-6 lg:col-span-4 xl:col-span-3 text-sm font-medium md:text-base px-6"
                             tabindex="0">
                             Dernière synchronisation
                         </a>
+                        <a id="flux" data-dialog-id="5"
+                            class="tab__btn rounded-md col-span-6 lg:col-span-4 xl:col-span-2 text-sm font-medium md:text-base pt-4 lg:py-0 px-6"
+                            tabindex="0">
+                            Flux de données
+                        </a>
+                        <div class="col-span-6 lg:col-span-4 xl:col-span-2 flex flex-nowrap pt-4 px-6 xl:py-0">
+                            <span class="text-[#007e80]">-</span>
+                            <a id="indice" data-dialog-id="6" class="secret rounded-md text-sm font-medium md:text-base"
+                                tabindex="0">
+                                As-tu tout vue?</a>
+
+                        </div>
                         <a id="protocole" data-dialog-id="3"
-                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
+                            class="tab__btn rounded-md col-span-6 lg:col-span-4 xl:col-span-2 text-sm font-medium md:text-base pt-8 md:pt-4 px-6 xl:py-0"
                             tabindex="0">
                             Protocole actif
                         </a>
                         <a id="acces" data-dialog-id="4"
-                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
+                            class="tab__btn rounded-md col-span-6 lg:col-span-4 xl:col-span-2 text-sm font-medium md:text-base pt-8 md:pt-4 px-6 xl:py-0"
                             tabindex="0">
                             Niveau d’accès
                         </a>
-                        <a id="flux" data-dialog-id="5"
-                            class="tab__btn row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6 text-body-color"
-                            tabindex="0">
-                            Flux de données
-                        </a>
-                        <a id="indice" data-dialog-id="6"
-                            class="secret row-span-1 rounded-md px-4 py-3 text-sm font-medium md:text-base lg:px-6"
-                            tabindex="0">
-                            As-tu tout vue?</a>
+
                     </div>
 
-                    <div class="systemeUI__dialog grid grid-cols-12 col-span-9">
-                        <div id="1" class="tab__dialog col-span-2 p-6 hidden">
+                    <div class="systemeUI__dialog grid grid-cols-12">
+                        <div id="1" class="tab__dialog col-span-6 lg:col-span-4 xl:col-span-1 px-4 py-2 hidden">
                             <p class="dialog__txt">OPÉRATIONNEL</p>
                         </div>
-                        <div id="2" class="tab__dialog col-span-2 col-start-3 p-6 hidden">
+                        <div id="2"
+                            class="tab__dialog col-span-6 col-start-7 lg:col-span-4 lg:col-start-5 xl:col-span-3 xl:col-start-2 px-4 py-2 hidden">
                             <p class="dialog__txt">
                                 00:03 | Gotham Standard Time
                             </p>
                         </div>
-                        <div id="3" class="tab__dialog col-span-2 col-start-5 p-6 hidden">
-                            <p class="dialog__txt">
-                                SILENCE-9
-                            </p>
-                        </div>
-                        <div id="4" class="tab__dialog col-span-2 col-start-7 p-6 hidden">
-                            <p class="dialog__txt">
-                                7 | Agent autorisé
-                            </p>
-                        </div>
-                        <div id="5" class="tab__dialog col-span-4 col-start-9 p-3 hidden">
 
+                        <div id="5"
+                            class="tab__dialog col-span-12 lg:col-span-4 lg:col-start-9 xl:col-span-6 xl:col-start-5 px-4 py-2 hidden">
                             <ul>
                                 <li class="dialog__txt--list"><span class="txt--list--title">Surveillance des
                                         toits</span>
@@ -603,18 +599,31 @@
                                     corrompu</li>
                             </ul>
                         </div>
+                        <div id="3"
+                            class="tab__dialog col-span-4 lg:col-start-5 xl:col-span-2 xl:col-start-9 px-4 py-2 hidden">
+                            <p class="dialog__txt">
+                                SILENCE-9
+                            </p>
+                        </div>
+                        <div id="4"
+                            class="tab__dialog col-span-4 col-start-7 lg:col-start-9 xl:col-span-2 xl:col-start-11 px-4 py-2 hidden">
+                            <p class="dialog__txt">
+                                7 | Agent autorisé
+                            </p>
+                        </div>
                     </div>
 
                 </div>
             </div>
             <div class="mt-5">
-                <p>Prochain protocole : INITIATION PAGE 3 – <a class="tab__btn acces-denied">Réseau & Alliés</a></p>
+                <p>Prochain protocole : INITIATION PAGE 3 – <a href="reseau&allies.html" class="tab__btn">Réseau &
+                        Alliés</a></p>
             </div>
         </section>
     </main>
 
     <footer class="w-[90%] mx-auto grid grid-cols-12 mt-5 mb-15">
-        <div class="col-span-2 col-start-6">
+        <div class="">
             <p class="text-center">copyrigth @ 2025</p>
         </div>
         <div class="col-span-1 col-start-12">

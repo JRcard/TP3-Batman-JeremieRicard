@@ -406,7 +406,12 @@ a:active {
 
 .tab__dialog {
   border-left: 3px solid #0d0d0d;
-  min-height: 170px;
+  min-height: 130px;
+}
+@media (max-width: 1280px) {
+  .tab__dialog {
+    min-height: 215px;
+  }
 }
 .tab__btn {
   cursor: pointer;
@@ -436,8 +441,4 @@ a:active {
 
 .txt--list--title {
   color: #a9a6a6;
-}
-
-.acces-denied {
-  cursor: not-allowed;
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v10";
+const CACHE_NAME = "static-cache-v11";
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
 	"indexOffline.html",
@@ -9,6 +9,7 @@ const FILES_TO_CACHE = [
 	"style/css/style.css",
 	"fonts/RobotoMono-VariableFont_wght.ttf",
 	"fonts/RobotoMono-Italic-VariableFont_wght.ttf",
+	"/images",
 ];
 
 self.addEventListener("install", (evt) => {

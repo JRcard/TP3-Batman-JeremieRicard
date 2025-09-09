@@ -4,23 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="style/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <meta name="description" content="Une brève description de votre site web ici.">
-    <title></title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="Bat-ordinateur: dossier #000, page 1: Présentation">
+    <title>Dossier personnel</title>
 </head>
+<script>
+    // Register service worker.
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("service-worker.js").then((reg) => {
+                console.log("Service worker registered.", reg);
+            });
+        });
+    }
+    alert("ce site est mainement OFFLINE");
+</script>
 
-<body>
+<body class="max-w-[1900px] w-[90%] mx-auto">
     <header>
+        <div>
+            <nav class="menu grid grid-cols-12 py-10" aria-label="Menu principal">
+                <h1><img class="menu__logo col-span-1 w-[55%]" src="images/batlogo.png"
+                        alt="Logo simple - masque de batamn"></h1>
 
+                <a class="menu__item col-span-2 col-start-7 text-center my-auto" id="butInstall" aria-label="Install"
+                    hidden>Bat-Install-PWA</a>
+                <ul class="menu__list flex justify-end items-center col-span-4 col-start-9">
+
+                    <li class="menu__item text-right"><a class="current" href="index.html" aria-current="page">Dossier
+                            personnel</a>
+                    </li>
+                    <li class="menu__item text-right"><a href="arsenal.html">Arsenal technologique</a></li>
+                    <li class="menu__item text-right"><a href="reseau&allies.html">Réseaux & Alliés</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        Tu es offline.
-    </main>
-    <footer>
+    <main id="main">
+        <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
+        <section class="presentation mb-15">
+            <h2 class="text-right mb-10 mt-20">Entrée #001 - Présentation</h2>
+            <div class="w-[80%] mx-auto grid grid-cols-12 my-[200px]">
+                <div class="col-span-6 flex flex-col justify-center">
+                    <p class="presentation__texte">Je suis né dans le chaos.</p>
+                    <p>Pas celui qu’on montre aux infos. Le vrai.</p>
+                    <p>Celui qui ronge les fondations, silencieusement.</p>
+                    <p class="pb-5">Gotham ne pardonne pas. Elle attend qu’on tombe.
+                    </p>
+                    <p>
+                        Je suis tombé.</p>
+                    <p>Puis j’ai appris à me relever.</p>
+                    <p>Pas pour me venger. Pas pour me faire aimer.</p>
+                    <p class="pb-5">Pour que plus personne ne tombe comme moi.</p>
 
+                    <p class="presentation__texte--emphase pb-5">
+                        Je ne suis pas un héros. Je suis une nécessité.
+                        Gotham ne se sauve pas avec des discours.
+                        Elle se nettoie dans l’ombre, une ruelle à la fois.
+                    </p>
+                    <p>
+                        Je suis la main qui frappe quand la loi hésite.</p>
+                    <p>Je suis l’œil qui veille quand les sirènes se taisent.</p>
+                    <p>Je suis ce que Gotham refuse d’admettre qu’elle a besoin.</p>
+                    <p class="pb-10">Je suis...</p>
+
+                    <h2 class="pb-15">BATMAN</h2>
+
+                </div>
+                <!-- <div class="col-span-6 my-[100px]"><img class="w-[60%] rounded-xl ml-auto" src="images/Batman.jpg"
+                        alt="Batman">
+                </div> -->
+                <!-- fonctionnel, reste le responsive -->
+                <div class="group relative col-span-6 ">
+                    <div
+                        class="absolute -top-10 left-5 ml-25 transition-opacity delay-300 duration-800 group-hover:opacity-0">
+                        <img class="rounded-xl w-[80%]" src="images/Batman.jpg" alt="Batman">
+                    </div>
+                    <div
+                        class="opacity-0 absolute -top-10 left-5 ml-25 transition-opacity delay-300 duration-800 group-hover:opacity-100">
+                        <img class="rounded-xl w-[80%]" src="images/BruceWayne.jpg" alt="Batman">
+
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+        </section>
+        <section class="identite mb-15">
+            <h2 class="identite__titre text-right mb-10 mt-20">Entrée #002 - Identité masqué</h2>
+            <div class="identite__content grid grid-cols-12 py-15">
+                <div class="col-span-7 flex flex-col justify-center">
+                    <div class="identite__list flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Alias détectés :</h3>
+                        <ul>
+                            <li>
+                                <p class="identite__texte">Le Chevalier Noir</p>
+                            </li>
+                            <li>
+                                <p class="identite__texte">Le Détective</p>
+                            </li>
+                            <li>
+                                <p class="identite__texte">Le Fils de Gotham</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- div model modifié -->
+                    <div class="flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Nom réel :</h3>
+                        <p class="identite__texte">█████ ████████</p>
+                    </div>
+                    <div class="flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Statut :</h3>
+                        <p class="identite__texte">Codé – Niveau d’accès requis : 7</p>
+                    </div>
+                    <div class="flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Empreinte ADN :</h3>
+                        <p class="identite__texte">87% match avec base WayneTech</p>
+                    </div>
+                    <div class="flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Rétine :</h3>
+                        <p class="identite__texte">Analyse en cours...</p>
+                    </div>
+                    <div class="flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Coordonnées :</h3>
+                        <p class="identite__texte">Brouillage actif</p>
+                    </div>
+                    <div class="flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Note système :</h3>
+                        <p class="identite__texte">“L’identité de l’opérateur est connue.<br>
+                            Mais elle ne doit jamais être confirmée.<br>
+                            Le doute est une arme. L’ombre, un refuge.”</p>
+                    </div>
+                    <div class="flex items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Protocole d’accès :</h3>
+                        <p class="identite__texte">[REDACTED]</p>
+                    </div>
+                </div>
+                <div class="col-span-5 flex flex-col justify-center" data-aos="fade-in" data-aos-duration="1000"
+                    data-aos-easing="ease-in">
+                    <img src="images/logo-batman-teal.png" alt="Logo de batman">
+                </div>
+            </div>
+            <div class="divider"></div>
+        </section>
+        <section class="mb-15">
+            <h2 class="text-right  mb-10 mt-20">Entrée #003 - Journal audio</h2>
+            <div class="grid grid-cols-12 gap-8 py-15">
+                <div class="journal__card col-span-4">
+                    <h3 class="py-3">Rapport #003-A</h3>
+                    <h4 class="pb-3">La nuit du Joker</h4>
+                    <div class="py-5">
+                        <p class="pb-3">Durée: <span class="audio-player__time italic" id="duree-003-A"></span></p>
+                        <i class='bx bx-rewind bouton--audio' id="rewind-003-A" tabindex="0"></i>
+                        <i class='bx bx-play bouton--audio' id="play-003-A" tabindex="0"></i>
+                    </div>
+                </div>
+                <div class="journal__card col-span-4">
+                    <h3 class="py-3">Rapport #003-B</h3>
+                    <h4 class="pb-3">Le Pacte de Gordon</h4>
+                    <div class="py-5">
+                        <p class="pb-3">Durée: <span class="audio-player__time italic" id="duree-003-B"></span></p>
+                        <i class='bx bx-rewind bouton--audio' id="rewind-003-B" tabindex="0"></i>
+                        <i class='bx bx-play bouton--audio' id="play-003-B" tabindex="0"></i>
+                    </div>
+                </div>
+                <div class="journal__card col-span-4">
+
+                    <h3 class="py-3">Rapport #003-C</h3>
+                    <h4 class="pb-3">L’Opération Silence</h4>
+
+                    <div class="py-5">
+                        <p class="pb-3">Durée: <span class="audio-player__time italic" id="duree-003-C"></span></p>
+                        <i class='bx bx-rewind bouton--audio' id="rewind-003-C" tabindex="0"></i>
+                        <i class='bx bx-play bouton--audio' id="play-003-C" tabindex="0"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+    <div class="divider"></div>
+    <footer class="grid grid-cols-12 mt-5 mb-15">
+        <div class="col-span-2 col-start-6">
+            <p class="text-center">copyrigth @ 2025</p>
+        </div>
+        <div class="col-span-1 col-start-12">
+            <a class="text-right" tabindex="0">mode furtif</a>
+        </div>
     </footer>
-    <script type="text/javascript" src="script/script.js"></script>
+    <script type="module" src="script/script.js"></script>
+    <script src="service-worker.js"></script>
+    <script src="js/install.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
 
 </html>

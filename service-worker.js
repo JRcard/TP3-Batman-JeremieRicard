@@ -7,12 +7,7 @@ const FILES_TO_CACHE = [
 	"arsenal.html",
 	"reseau&allies.html",
 	"style/css/style.css",
-	"script/install.js",
-	"script/audio_player.js",
-	"script/carousel.js",
-	"script/tabs.js",
-	"script/script.js",
-	"fonts/Orbitron.ttf",
+	"/script",
 	"fonts/RobotoMono-VariableFont_wght.ttf",
 	"fonts/RobotoMono-Italic-VariableFont_wght.ttf",
 	"/images",
@@ -60,8 +55,9 @@ self.addEventListener("fetch", (evt) => {
 	}
 	evt.respondWith(
 		fetch(evt.request).catch(() => {
+			console.log("[ServiceWorker] fetch().catch() open cache");
 			return caches.open(CACHE_NAME).then((cache) => {
-				return cache.match("TP3-Batman-JeremieRicard/indexOffline.html");
+				return cache.match("indexOffline.html");
 			});
 		})
 	);

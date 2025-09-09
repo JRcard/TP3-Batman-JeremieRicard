@@ -9,6 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -33,8 +34,8 @@
                 <h1><img class="menu__logo col-span-1 w-[55%]" src="images/batlogo.png"
                         alt="Logo simple - masque de batamn"></h1>
 
-                <a class="menu__item col-span-2 col-start-7 text-center my-auto" id="butInstall" aria-label="Install"
-                    role="button">Bat-Install-PWA</a>
+                <button class="bouton col-span-2 col-start-7 text-center my-auto" id="butInstall" aria-label="Install"
+                    hidden>Bat-Install-PWA</button>
                 <ul class="menu__list flex justify-end items-center col-span-4 col-start-9">
 
                     <li class="menu__item text-right"><a class="current" href="index.html" aria-current="page">Dossier
@@ -81,16 +82,11 @@
                         alt="Batman">
                 </div> -->
                 <!-- fonctionnel, reste le responsive -->
-                <div class="group relative col-span-6 ">
-                    <div
-                        class="absolute -top-10 left-5 ml-25 transition-opacity delay-300 duration-800 group-hover:opacity-0">
-                        <img class="rounded-xl w-[80%]" src="images/Batman.jpg" alt="Batman">
-                    </div>
-                    <div
-                        class="opacity-0 absolute -top-10 left-5 ml-25 transition-opacity delay-300 duration-800 group-hover:opacity-100">
-                        <img class="rounded-xl w-[80%]" src="images/BruceWayne.jpg" alt="Batman">
-
-                    </div>
+                <div class="group col-span-6 col-start-8">
+                    <img class="rounded-xl w-[80%] transition-opacity duration-1000 ease-out group-hover:opacity-0"
+                        src="images/Batman.jpg" alt="Batman">
+                    <img class="mt-[-695px] rounded-xl w-[80%] opacity-0 transition-opacity duration-1000 ease-in group-hover:opacity-100"
+                        src="images/BruceWayne.jpg" alt="Batman">
                 </div>
             </div>
             <div class="divider"></div>
@@ -199,9 +195,8 @@
             <a class="text-right" tabindex="0">mode furtif</a>
         </div>
     </footer>
-    <script type="module" src="script/script.js"></script>
-    <script src="service-worker.js"></script>
     <script src="script/install.js"></script>
+    <script type="module" src="script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
 

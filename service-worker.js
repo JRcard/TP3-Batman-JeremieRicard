@@ -1,5 +1,5 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v14";
+const CACHE_NAME = "static-cache-v15";
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
 	"indexOffline.html",
@@ -44,7 +44,7 @@ self.addEventListener("activate", (evt) => {
 });
 
 /* Si internet coupe load la cache: */
-self.addEventListener("fetch", (evt) => {
+self.addEventListener("fetch", async (evt) => {
 	console.log("[ServiceWorker] Fetch", evt.request.url);
 	//Add fetch event handler here.
 	if (evt.request.mode !== "navigate") {
@@ -52,7 +52,7 @@ self.addEventListener("fetch", (evt) => {
 		return;
 	}
 	evt.respondWith(
-		fetch(evt.request).catch(() => {
+		fetch(evt.request).catch(async () => {
 			console.log("[ServiceWorker] fetch().catch() open cache");
 			return caches.open(CACHE_NAME).then((cache) => {
 				return cache.match("indexOffline.html");

@@ -1,5 +1,5 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v4";
+const CACHE_NAME = "static-cache-v5";
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
 	"indexOffline.html",
@@ -7,6 +7,11 @@ const FILES_TO_CACHE = [
 	"arsenal.html",
 	"reseau&allies.html",
 	"style/css/style.css",
+	"script/install.js",
+	"script/audio_player.js",
+	"script/carousel.js",
+	"script/tabs.js",
+	"script/script.js",
 	"fonts/Orbitron.ttf",
 	"fonts/RobotoMono-VariableFont_wght.ttf",
 	"fonts/RobotoMono-Italic-VariableFont_wght.ttf",

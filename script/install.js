@@ -7,6 +7,7 @@ window.addEventListener("beforeinstallprompt", saveBeforeInstallPromptEvent);
 function saveBeforeInstallPromptEvent(evt) {
 	// CODELAB: Add code to save event & show the install button.
 	deferredInstallPrompt = evt;
+	evt.preventDefault();
 	installButton.removeAttribute("hidden");
 	console.log("a la fin du saveBeforeInsatallPromptEvent()");
 }

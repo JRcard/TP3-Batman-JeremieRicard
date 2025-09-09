@@ -2,12 +2,13 @@ let deferredInstallPrompt = null;
 const installButton = document.getElementById("butInstall");
 installButton.addEventListener("click", installPWA);
 
-window.onload = () => {
-	saveBeforeInstallPromptEvent();
-};
+window.addEventListener("beforeinstallprompt", saveBeforeInstallPromptEvent);
 
 function saveBeforeInstallPromptEvent(evt) {
+	// CODELAB: Add code to save event & show the install button.
 	deferredInstallPrompt = evt;
+	installButton.removeAttribute("hidden");
+	console.log("a la fin du saveBeforeInsatallPromptEvent()");
 }
 
 function installPWA(evt) {
@@ -31,6 +32,5 @@ window.addEventListener("appinstalled", logAppInstalled);
 
 function logAppInstalled(evt) {
 	// Add code to log the event
-	evt.srcElement.setAttribute("hidden", true);
 	console.log("Weather App was installed.", evt);
 }

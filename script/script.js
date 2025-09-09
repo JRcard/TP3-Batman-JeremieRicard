@@ -1,6 +1,6 @@
 import { setupAudioPlayer } from "./audio_player.js";
 
-/* AUDIO PLAYERS  */
+/* AUDIO PLAYERS */
 /* audio-003-A */
 setupAudioPlayer("audio/Rapport_003-A.mp3", "play-003-A", "rewind-003-A", "duree-003-A");
 

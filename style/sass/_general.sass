@@ -2,8 +2,7 @@
 @use 'typographie' as *
 @use 'mixins' as *
 
-html
-    cursor: none
+
 
 body
     background-color: $deepBlack
@@ -87,7 +86,7 @@ a
     &:hover
         color: $cyan
 
-.pointer
+.batPointer
     position: fixed
     top: 0
     left: 0
@@ -103,7 +102,14 @@ a
     transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0) translate(-50%, -50%)
 
     transition: 0.15s ease-out
-    transition-property: transform width border background-color
+    transition-property: transform width border background-color 
+
+    /* https://www.youtube.com/watch?v=r1nWWrsVqmI&ab_channel=LiveBlogger */
+.pointer
+    position: fixed
+    inset: 0
+    background: radial-gradient(circle 200px at 50% 50%, transparent 10%, $deepBlack)
+    pointer-events: none
 
 @media (prefered-reduce-motion: reduce)
     .pointer,

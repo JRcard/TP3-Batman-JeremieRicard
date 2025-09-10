@@ -8,19 +8,21 @@ if (shouldRun) {
 	let mouseX = 0;
 	let mouseY = 0;
 
-	const coordinates = document.querySelector("#coordinates span");
 	const pointer = document.querySelector(".pointer");
+	const batPointer = document.querySelector(".batPointer");
 
 	window.addEventListener("mousemove", (e) => {
 		mouseX = e.clientX;
 		mouseY = e.clientY;
 
-		coordinates.innerHTML = `x: ${mouseX} y: ${mouseY}`;
+		const gradientCenterX = (mouseX / window.innerWidth) * 100;
+		const gradientCenterY = (mouseY / window.innerHeight) * 100;
+		pointer.style.background = `radial-gradient(circle 125px at ${gradientCenterX}% ${gradientCenterY}%, transparent 10%, #0d0d0d)`;
 	});
 
 	const animate = () => {
-		pointer.style.setProperty("--mouseX", `${mouseX}px`);
-		pointer.style.setProperty("--mouseY", `${mouseY}px`);
+		batPointer.style.setProperty("--mouseX", `${mouseX}px`);
+		batPointer.style.setProperty("--mouseY", `${mouseY}px`);
 		requestAnimationFrame(animate);
 	};
 

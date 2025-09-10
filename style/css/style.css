@@ -12,10 +12,6 @@
   src: url("../../fonts/RobotoMono-Italic-VariableFont_wght.ttf");
   font-style: italic;
 }
-html {
-  cursor: none;
-}
-
 body {
   background-color: #0d0d0d;
 }
@@ -142,7 +138,7 @@ a:active {
   color: #00fcfc;
 }
 
-.pointer {
+.batPointer {
   position: fixed;
   top: 0;
   left: 0;
@@ -158,6 +154,14 @@ a:active {
   transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0) translate(-50%, -50%);
   transition: 0.15s ease-out;
   transition-property: transform width border background-color;
+  /* https://www.youtube.com/watch?v=r1nWWrsVqmI&ab_channel=LiveBlogger */
+}
+
+.pointer {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle 200px at 50% 50%, transparent 10%, #0d0d0d);
+  pointer-events: none;
 }
 
 @media (prefered-reduce-motion: reduce) {

@@ -16,24 +16,14 @@
     <meta name="description" content="Bat-ordinateur: dossier #000, page 1: Présentation">
     <title>Dossier personnel</title>
 </head>
-<script>
-    // Register service worker.
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker.register("service-worker.js").then((reg) => {
-                console.log("Service worker registered.", reg);
-            });
-        });
-    }
-</script>
 
 <body class="max-w-[1900px] w-[90%] mx-auto">
+    <div class="pointer" aria-hidden="true"></div>
     <header>
         <div>
             <nav class="menu grid grid-cols-12 py-10" aria-label="Menu principal">
                 <h1><img class="menu__logo col-span-1 w-[55%]" src="images/batlogo.png"
                         alt="Logo simple - masque de batamn"></h1>
-
                 <button class="bouton col-span-2 col-start-7 text-center my-auto" id="butInstall" aria-label="Install"
                     hidden>Bat-Install-PWA</button>
                 <ul class="menu__list flex justify-end items-center col-span-4 col-start-9">
@@ -196,8 +186,19 @@
         </div>
     </footer>
     <script src="script/install.js"></script>
+    <script src="script/mouse.js"></script>
     <script type="module" src="script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        // Register service worker.
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js").then((reg) => {
+                    console.log("Service worker registered.", reg);
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>

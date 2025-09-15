@@ -1,0 +1,18 @@
+@use 'general' as *
+@use 'colors' as *
+@use 'typographie' as *
+@use 'mixins' as *
+
+.reseau
+    &__titre
+        @extend %titre
+            
+    &__sousTitre
+        @extend %sousTitre
+
+.hostiles
+    &__titre
+        @include header_font(2.5rem)
+        color: $redAlert
+        font-style: italic
+        

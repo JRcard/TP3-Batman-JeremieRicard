@@ -327,7 +327,51 @@
             </div>
 
         </section>
+        <div class="divider"></div>
+        <section>
+            <div class="grid grid-cols-12 mb-10">
+                <h2 class="reseau__titre col-span-12 text-right mb-10 mt-20">Entrée #009
+                    - Accès restreint</h2>
+                <h3 class="reseau__sousTitre col-span-12 lg:col-span-6 lg:col-start-7 mb-10">L’accès est verrouillé.
+                    Seuls les agents autorisés peuvent franchir ce seuil. Chaque champ est une preuve. Chaque réponse,
+                    une clé.</h3>
+            </div>
+            <div class="relative">
+                <form class="form__code-secret grid grid-cols-12 mb-20" novalidate>
+                    <h3 class="col-span-12 mb-5 text-center">Code d'accès secret</h3>
+                    <label class="text-[#0d0d0d]" for="code_1">#1</label>
+                    <label class="text-[#0d0d0d]" for="code_2">#2</label>
+                    <label class="text-[#0d0d0d]" for="code_3">#3</label>
+                    <div class="col-span-12 flex justify-center">
+                        <input class="code-secret__input mr-5" type="number" id="code_1" name="1" placeholder="00">
+                        <input class="code-secret__input mr-5" type="number" id="code_2" name="2" placeholder="00">
+                        <input class="code-secret__input" type="number" id="code_3" name="3" placeholder="00">
+                    </div>
+                    <div class="form--errorMessage col-span-2 col-start-6"></div>
+                    <input class="bouton col-span-2 col-start-6 items-center mt-5" type="submit" value="acceder">
 
+                </form>
+
+                <div class="double_verification">
+                    <h2>Formulaire de base</h2>
+                    <form>
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" />
+                        <br />
+
+                        <label for="email">Courriel</label>
+                        <input type="email" id="email" name="email" placeholder="exemple@courriel.com" />
+                        <br />
+
+                        <label for="age">Âge</label>
+                        <input type="number" id="age" name="age" min="0" max="120" />
+                        <br />
+
+                        <input type="submit" value="Soumettre" />
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <div class="divider"></div>
     <footer class="grid grid-cols-12 mt-5 mb-15">
@@ -338,7 +382,7 @@
             <a id="furtif" class="text-right" tabindex="0">mode furtif</a>
         </div>
     </footer>
-    <script src="script/script.js"></script>
+    <script src="script/validation.js"></script>
 </body>
 
 </html>

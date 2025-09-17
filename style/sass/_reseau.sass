@@ -35,6 +35,46 @@
         margin-top: 0.5rem
 
 
+.code-secret
+    &__input
+        @include header_font(2rem)
+        text-align: center
+        color: $redAlert
+        border: 2px solid $cyan
+        padding: 25px 5px
+        border-radius: 0px 25px
+        
+        &::placeholder
+            color: $darkSlateGray
+.form
+    &--errorMessage 
+        text-align: center
+        color: $redAlert
+        font-size: 15px
+        margin: 10px 0px 5px
+        height: 25px
 
+.success
+    border-color: $yellow
+.error
+    border-colo: 2px solid $redAlert
+
+.double_verification
+    position: absolute
+    bottom: -400px
+    left: 0
+    width: 100%
+    background-color: #4CAF50
+    color: white
+    display: hidden
+    justify-content: center
+    align-items: center
+    font-size: 1.5em
+    transition: bottom 1s ease-in-out
+    z-index: 1000
+
+.visible 
+    display: inline
+    bottom: 0
 
         

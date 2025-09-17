@@ -515,4 +515,25 @@ a:active {
   line-height: 1;
   color: #ff3b3b;
   font-style: italic;
+}
+
+.operations__log {
+  border-left: 4px solid #ff3b3b;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: "Courier New", monospace;
+  color: #fafafa;
+}
+.operations__log-entete {
+  font-weight: bold;
+  color: #ff3b3b;
+}
+.operations__log-corps {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+.operations__log-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

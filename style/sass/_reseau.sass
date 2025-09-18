@@ -39,15 +39,15 @@
     &__input
         @include header_font(2rem)
         text-align: center
-        color: $redAlert
+        color: $yellow
         border: 2px solid $cyan
-        padding: 25px 5px
+        
         border-radius: 0px 25px
         
         &::placeholder
             color: $darkSlateGray
 .form
-    &--errorMessage 
+    &__error 
         color: $redAlert
         font-size: 15px
         margin: 10px 0px 5px
@@ -58,10 +58,16 @@
     font-weight: 600
     font-size: 1rem
     background-color: $yellow
+
 .error
     font-weight: 600
     font-size: 1rem
     background-color: $redAlert
+    &--access
+        @include header_font(2rem)
+        text-align: center
+        color: $yellow
+        background-color: $redAlert
 
 .double_verification
     visibility: hidden

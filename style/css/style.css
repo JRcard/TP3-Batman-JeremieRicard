@@ -543,16 +543,15 @@ a:active {
   color: #00cdcd;
   line-height: 1;
   text-align: center;
-  color: #ff3b3b;
+  color: #fdd700;
   border: 2px solid #00fcfc;
-  padding: 25px 5px;
   border-radius: 0px 25px;
 }
 .code-secret__input::placeholder {
   color: #303030;
 }
 
-.form--errorMessage {
+.form__error {
   color: #ff3b3b;
   font-size: 15px;
   margin: 10px 0px 5px;
@@ -569,6 +568,14 @@ a:active {
 .error {
   font-weight: 600;
   font-size: 1rem;
+  background-color: #ff3b3b;
+}
+.error--access {
+  font: 2rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+  text-align: center;
+  color: #fdd700;
   background-color: #ff3b3b;
 }
 

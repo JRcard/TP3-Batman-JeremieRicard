@@ -25,10 +25,10 @@ const validateAccess = () => {
 	if (code_1_value != "10110" || code_2_value != "10000" || code_3_value != "10011") {
 		if (count < 2) {
 			count++;
-			setError(code_secret, `Accès refusé: il te reste ${3 - count} chance(s)`);
+			setErrorAccess(`Accès refusé: il te reste ${3 - count} chance(s)`);
 			return false;
 		} else {
-			setError(code_secret, "Indice: La forme des champs numériques ne te rappelle rien?");
+			setErrorAccess("Indice: La forme des champs numériques ne te rappelle rien?");
 			count = 0;
 			return false;
 		}
@@ -120,11 +120,22 @@ const validateForm = () => {
 	return noError; // Return true if there are no errors, false otherwise
 };
 
-const setError = (element, message) => {
-	const inputControl = element.parentElement; // Get the parent element of the input field
+const setErrorAccess = (message) => {
+	const errorDisplay = document.querySelector(".form__error");
+	const inputs = document.querySelectorAll("input.code-secret__input");
 
-	// Find the error message element within the parent element
-	const errorDisplay = inputControl.querySelector(".form--errorMessage");
+	errorDisplay.innerText = message;
+	inputs.forEach((input) => {
+		if (!input.classList.contains("error--access")) {
+			input.classList.add("error--access");
+		}
+	});
+};
+
+const setError = (element, message) => {
+	const inputControl = element.parentElement;
+
+	const errorDisplay = inputControl.querySelector(".form__error");
 
 	errorDisplay.innerText = message;
 	element.classList.add("error");
@@ -133,7 +144,7 @@ const setError = (element, message) => {
 
 const setSuccess = (element) => {
 	const inputControl = element.parentElement;
-	const errorDisplay = inputControl.querySelector(".form--errorMessage");
+	const errorDisplay = inputControl.querySelector(".form__error");
 
 	errorDisplay.innerText = "";
 	element.classList.add("success");

@@ -332,12 +332,12 @@
             <div class="grid grid-cols-12 mb-10">
                 <h2 class="reseau__titre col-span-12 text-right mb-10 mt-20">Entrée #009
                     - Accès restreint</h2>
-                <h3 class="reseau__sousTitre col-span-12 lg:col-span-6 lg:col-start-7 mb-10">L’accès est verrouillé.
-                    Seuls les agents autorisés peuvent franchir ce seuil. Chaque champ est une preuve. Chaque réponse,
+                <h3 class="reseau__sousTitre col-span-12 lg:col-span-6 lg:col-start-7 mb-10">Accès verrouillé.
+                    Seuls les agents autorisés peuvent continuer. Chaque champ est une épreuve. Chaque réponse,
                     une clé.</h3>
             </div>
             <div class="">
-                <form class="form__code-secret grid grid-cols-12 mb-20" novalidate>
+                <form class="form__code-secret grid grid-cols-12 mb-20" novalidate hidden>
                     <h3 class="col-span-12 mb-5 text-center">Code d'accès secret</h3>
                     <label class="text-[#0d0d0d]" for="code_1">#1</label>
                     <label class="text-[#0d0d0d]" for="code_2">#2</label>
@@ -347,25 +347,25 @@
                         <input class="code-secret__input mr-5" type="number" id="code_2" name="2" placeholder="00">
                         <input class="code-secret__input" type="number" id="code_3" name="3" placeholder="00">
                     </div>
-                    <div class="form--errorMessage col-span-2 col-start-6"></div>
+                    <div class="form--errorMessage text-center col-span-2 col-start-6"></div>
                     <input class="bouton col-span-2 col-start-6 items-center mt-5" type="submit" value="acceder">
 
                 </form>
 
-                <div class="double_verification">
+                <div class="double_verification visible">
                     <!-- https://tailwindcss.com/plus/ui-blocks/application-ui/forms/form-layouts -->
                     <form class="double_verification__form" novalidate>
                         <div class="pb-12">
-                            <h2 class="text-base/7 font-semibold text-white">Double vérification d'accessibilité</h2>
+                            <h2>Double vérification d'accessibilité</h2>
                             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                                 <div class="sm:col-span-3">
-                                    <label for="nomComplet" class="block text-sm/6 font-medium text-white">Nom
+                                    <label for="nomReel" class="block text-sm/6 font-medium text-white">Nom
                                         réel</label>
                                     <div class="mt-2">
-                                        <input id="nomComplet" type="text" name="nomComplet" autocomplete="given-name"
-                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 placeholder:text-[#7a7a7a] focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6"
+                                        <input id="nomReel" type="text" name="nomReel" autocomplete="given-name"
+                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6"
                                             required />
-                                        <div class="form--errorMessage col-span-2 col-start-6"></div>
+                                        <div class="form--errorMessage col-span-2"></div>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-3">
@@ -373,15 +373,15 @@
                                         principal</label>
                                     <div class="mt-2">
                                         <input id="alias" type="text" name="alias"
-                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 placeholder:text-[#7a7a7a] focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
-                                        <div class="form--errorMessage col-span-2 col-start-6"></div>
+                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
+                                        <div class="form--errorMessage col-span-2"></div>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-4">
                                     <label for="email" class="block text-sm/6 font-medium text-white">Courriel</label>
                                     <div class="mt-2">
                                         <input id="email" type="email" name="email" autocomplete="email"
-                                            class="block w-[50%] rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 placeholder:text-[#7a7a7a] focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
+                                            class="block w-[50%] rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
                                         <div class="form--errorMessage col-span-2 col-start-6"></div>
                                     </div>
                                 </div>
@@ -390,28 +390,29 @@
                                         d'opération</label>
                                     <div class="mt-2 grid grid-cols-1">
                                         <select id="ville" name="ville"
-                                            class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white/5 py-1.5 pr-8 pl-3 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6">
+                                            class="col-start-1 row-start-1 appearance-none rounded-md bg-white/5 py-1.5 pr-8 pl-3 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6">
                                             <option></option>
                                             <option>Smallville</option>
                                             <option>Gotham</option>
                                             <option>Themyscira</option>
                                         </select>
-                                        <div class="form--errorMessage col-span-2 col-start-6"></div>
+
                                         <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true"
                                             class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-400 sm:size-4">
                                             <path
                                                 d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
                                                 clip-rule="evenodd" fill-rule="evenodd" />
                                         </svg>
+                                        <div class="form--errorMessage col-span-2"></div>
                                     </div>
                                 </div>
                                 <div class="col-span-full">
-                                    <label for="street-address" class="block text-sm/6 font-medium text-white">Agent
+                                    <label for="agentAutorise" class="block text-sm/6 font-medium text-white">Agent
                                         autorisé - Niveau
                                         d’accès</label>
                                     <div class="mt-2">
-                                        <input id="street-address" type="number" name="street-address"
-                                            class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 placeholder:text-[#7a7a7a] focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
+                                        <input id="agentAutorise" type="number" name="agentAutorise"
+                                            class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
                                         <div class="form--errorMessage col-span-2 col-start-6"></div>
                                     </div>
                                 </div>
@@ -420,26 +421,25 @@
                                         signal</label>
                                     <div class="mt-2">
                                         <input id="tel" type="tel" name="tel"
-                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 placeholder:text-[#7a7a7a] focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
+                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
                                         <div class="form--errorMessage col-span-2 col-start-6"></div>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-2">
-                                    <label for="Protocole" class="block text-sm/6 font-medium text-white">Protocole
+                                    <label for="protocole" class="block text-sm/6 font-medium text-white">Protocole
                                         actif</label>
                                     <div class="mt-2">
-                                        <input id="Protocole" type="text" name="Protocole"
-                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 placeholder:text-[#7a7a7a] focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
+                                        <input id="protocole" type="text" name="protocole"
+                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
                                         <div class="form--errorMessage col-span-2 col-start-6"></div>
                                     </div>
                                 </div>
                                 <div class="sm:col-span-2">
-                                    <label for="postal-code" class="block text-sm/6 font-medium text-white">Code
+                                    <label for="codePostal" class="block text-sm/6 font-medium text-white">Code
                                         Postal</label>
                                     <div class="mt-2">
-                                        <input id="postal-code" type="text" name="postal-code"
-                                            autocomplete="postal-code"
-                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 placeholder:text-[#7a7a7a] focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
+                                        <input id="codePostal" type="text" name="codePostal" autocomplete="codePostal"
+                                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-[#a9a6a6]/10 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00cdcd] sm:text-sm/6" />
                                         <div class="form--errorMessage col-span-2 col-start-6"></div>
                                     </div>
                                 </div>
@@ -447,7 +447,7 @@
                         </div>
                         <div class="mt-6 flex items-center justify-end gap-x-6">
                             <button type="submit"
-                                class="bouton focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00cdcd]">connexion</button>
+                                class="bouton form__btn focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00cdcd]">connexion</button>
                         </div>
                     </form>
                 </div>

@@ -553,7 +553,6 @@ a:active {
 }
 
 .form--errorMessage {
-  text-align: center;
   color: #ff3b3b;
   font-size: 15px;
   margin: 10px 0px 5px;
@@ -561,11 +560,16 @@ a:active {
 }
 
 .success {
-  border-color: #fdd700;
+  color: #0d0d0d;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #fdd700;
 }
 
 .error {
-  border-colo: 2px solid #ff3b3b;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #ff3b3b;
 }
 
 .double_verification {

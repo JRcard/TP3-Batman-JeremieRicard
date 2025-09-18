@@ -4,12 +4,19 @@ const code_2_input = document.getElementById("code_2");
 const code_3_input = document.getElementById("code_3");
 let count = 0;
 
-/* const form = document.querySelector(".form");
-const firstNameInput = document.getElementById("firstName");
-const lastNameInput = document.getElementById("lastName");
+/* Double vérification */
+const form = document.querySelector(".double_verification__form");
+const nomReelInput = document.getElementById("nomReel");
+const aliasInput = document.getElementById("alias");
 const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
-const submitButton = document.querySelector(".form__btn"); */
+const villeSelected = document.getElementById("ville");
+const agentAutoriseInput = document.getElementById("agentAutorise");
+const telInput = document.getElementById("tel");
+const protocoleInput = document.getElementById("protocole");
+const codePostalInput = document.getElementById("codePostal");
+const submitButton = document.querySelector(".form__btn");
+let agentCount = 0;
+let protocoleCount = 0;
 
 const validateAccess = () => {
 	const code_1_value = parseInt(code_1_input.value).toString(2);
@@ -30,16 +37,23 @@ const validateAccess = () => {
 
 const validateForm = () => {
 	let noError = true;
-	const firstNameValue = firstNameInput.value.trim();
-	const lastNameValue = lastNameInput.value.trim();
+	const nomReelValue = nomReelInput.value.trim();
+	const aliasValue = aliasInput.value.trim();
 	const emailValue = emailInput.value.trim();
-	const messageValue = messageInput.value.trim();
+	const villeValue = villeSelected.value;
+	const agentAutoriseValue = parseInt(agentAutoriseInput.value);
+	const telValue = telInput.value.trim();
+	const protocoleValue = protocoleInput.value.trim();
+	const codePostalValue = codePostalInput.value.trim().toUpperCase();
 
-	nameValidator(firstNameValue, firstNameInput);
-	nameValidator(lastNameValue, lastNameInput);
-
+	if (!nameValidator(nomReelValue, nomReelInput)) {
+		noError = false;
+	}
+	if (!nameValidator(aliasValue, aliasInput)) {
+		noError = false;
+	}
 	if (emailValue === "") {
-		setError(emailInput, "Le courriel ne doit pas être vide");
+		setError(emailInput, "Ce champ est obligatoire");
 		noError = false;
 	} else if (!isValidEmail(emailValue)) {
 		setError(emailInput, "Le courriel contient des caratères invalides et ne respecte pas la forme sémentique d'une adresse courriel.");
@@ -48,15 +62,60 @@ const validateForm = () => {
 		setSuccess(emailInput);
 	}
 
-	if (messageValue === "") {
-		setError(messageInput, "Le message ne doit pas être vide");
+	if (villeValue === "") {
+		setError(villeSelected, "Ce champ est obligatoire");
 		noError = false;
-	} else if (!verifyInput(messageValue)) {
-		setError(messageInput, "Le message contient des caractères qui pourrait servir à des activitées malvaillantes ( antislash, &, <, > et le guillement double)");
+	} else if (villeValue != "Gotham") {
+		setError(villeSelected, "Really!? " + villeValue + "!?");
+		noError = false;
+	} else setSuccess(villeSelected);
+
+	if (isNaN(agentAutoriseValue)) {
+		setError(agentAutoriseInput, "Ce champ est obligatoire");
+		noError = false;
+	} else if (!verifyAgent(agentAutoriseValue)) {
+		if (agentCount < 2) {
+			agentCount++;
+			setError(agentAutoriseInput, `Accès refusé: il te reste ${3 - agentCount} chance(s)`);
+			noError = false;
+		} else {
+			setError(agentAutoriseInput, "Indice: Arsenal technologique: Entrée #006");
+			agentCount = 0;
+			noError = false;
+		}
+	} else setSuccess(agentAutoriseInput);
+	if (telValue === "") {
+		setError(telInput, "Ce champ est obligatoire");
+		noError = false;
+	} else if (!verifyTelFormat(telValue)) {
+		setError(telInput, "Le format n'est pas correspondant à (###) ###-####");
 		noError = false;
 	} else {
-		setSuccess(messageInput);
+		setSuccess(telInput);
 	}
+
+	if (protocoleValue === "") {
+		setError(protocoleInput, "Ce champ est obligatoire");
+		noError = false;
+	} else if (!verifyProtocole(protocoleValue)) {
+		if (protocoleCount < 2) {
+			protocoleCount++;
+			setError(protocoleInput, `Accès refusé: il te reste ${3 - protocoleCount} chance(s)`);
+			noError = false;
+		} else {
+			setError(protocoleInput, "Indice: dossier personnel: Entrée #002");
+			protocoleCount = 0;
+			noError = false;
+		}
+	} else setSuccess(protocoleInput);
+
+	if (codePostalValue === "") {
+		setError(codePostalInput, "Ce champ est obligatoire");
+		noError = false;
+	} else if (!verifyCodePostal(codePostalValue)) {
+		setError(codePostalInput, "Le Code Postal ne correspond pas au bon format (A1A 1A1). Il ne doit pas débuterpar un 'Z' ou 'W' ni contenir D, F, I, O, Q ou U");
+		noError = false;
+	} else setSuccess(codePostalInput);
 
 	return noError; // Return true if there are no errors, false otherwise
 };
@@ -68,8 +127,8 @@ const setError = (element, message) => {
 	const errorDisplay = inputControl.querySelector(".form--errorMessage");
 
 	errorDisplay.innerText = message;
-	inputControl.classList.add("error");
-	inputControl.classList.remove("success");
+	element.classList.add("error");
+	element.classList.remove("success");
 };
 
 const setSuccess = (element) => {
@@ -77,29 +136,46 @@ const setSuccess = (element) => {
 	const errorDisplay = inputControl.querySelector(".form--errorMessage");
 
 	errorDisplay.innerText = "";
-	inputControl.classList.add("success");
-	inputControl.classList.remove("error");
+	element.classList.add("success");
+	element.classList.remove("error");
 };
 
 const isValidEmail = (email) => {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(String(email).toLowerCase());
 };
+const verifyTelFormat = (tel) => {
+	const re = /\([0-9]+\)\s[0-9]+-[0-9]+/i;
+	return re.test(tel);
+};
+const verifyAgent = (agent) => {
+	return btoa(agent) === "Nw==";
+};
+const verifyProtocole = (protocole) => {
+	return btoa(protocole) === "U0lMRU5DRS05";
+};
+const verifyCodePostal = (codePostal) => {
+	const re = /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVXY][ ]?\d[ABCEGHJKLMNPRSTVXY]\d$/i;
+	return re.test(codePostal);
+};
 
 const nameValidator = (nom, input) => {
 	if (nom === "") {
-		setError(input, "Ce champ est requis.");
-		noError = false;
+		setError(input, "Ce champ est obligatoire");
+		return false;
 	} else if (nom.length < 2) {
 		setError(input, "Ce champ doit contenir au moins 2 caractères.");
-		noError = false;
+		return false;
 	} else if (nom.length > 75) {
 		setError(input, "Ce champ doit contenir moins de 75 caractères.");
-		noError = false;
+		return false;
 	} else if (/\d/.test(nom) || !/^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/.test(nom[0])) {
 		setError(input, "Ce champ ne doit pas contenir de nombres et doit commencer par une lettre");
-		noError = false;
-	} else setSuccess(input);
+		return false;
+	} else {
+		setSuccess(input);
+		return true;
+	}
 };
 
 /* évite les injections malveillantes */
@@ -118,10 +194,9 @@ code_secret.addEventListener("submit", (e) => {
 	}
 });
 
-/* form.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
 	e.preventDefault();
-	validateForm();
 	if (validateForm()) {
-		window.location.href = "confirmation.html";
+		window.location.href = "https://portfolio.jeremiericard.ca";
 	}
-}); */
+});

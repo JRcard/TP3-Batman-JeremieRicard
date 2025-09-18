@@ -114,6 +114,7 @@ code_secret.addEventListener("submit", (e) => {
 		setSuccess(code_secret);
 		count = 0;
 		document.querySelector(".double_verification").classList.add("visible");
+		code_secret.classList.add("hidden");
 	}
 });
 

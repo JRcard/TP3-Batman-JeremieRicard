@@ -143,15 +143,15 @@ a:active {
   top: 0;
   left: 0;
   z-index: 999;
-  width: 40px;
-  height: 40px;
+  width: 210px;
+  height: 210px;
   aspect-ratio: 1;
-  background: url("https://www.freepnglogos.com/uploads/black-logo-batman-png-1.png") no-repeat #fdd700;
+  background: url("https://www.freepnglogos.com/uploads/black-logo-batman-png-1.png") no-repeat rgba(253, 227, 17, 0.12);
   background-size: 100%;
   background-position: 50% 50%;
   border-radius: 100%;
   pointer-events: none;
-  transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0) translate(-50%, -50%);
+  transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0) translate(-105%, -75%);
   transition: 0.15s ease-out;
   transition-property: transform width border background-color;
   /* https://www.youtube.com/watch?v=r1nWWrsVqmI&ab_channel=LiveBlogger */
@@ -569,21 +569,19 @@ a:active {
 }
 
 .double_verification {
-  position: absolute;
-  bottom: -400px;
-  left: 0;
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  display: hidden;
+  visibility: hidden;
+  margin-top: -900px;
+  margin-bottom: 20px;
+  opacity: 0;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
-  transition: bottom 1s ease-in-out;
-  z-index: 1000;
+  transition: opacity 1s ease-in-out;
+  z-index: -10;
 }
 
 .visible {
-  display: inline;
-  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0px;
 }/*# sourceMappingURL=style.css.map */

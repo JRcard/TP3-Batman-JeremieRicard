@@ -17,7 +17,7 @@ if (shouldRun) {
 
 		const gradientCenterX = (mouseX / window.innerWidth) * 100;
 		const gradientCenterY = (mouseY / window.innerHeight) * 100;
-		pointer.style.background = `radial-gradient(circle 125px at ${gradientCenterX}% ${gradientCenterY}%, transparent 10%, #0d0d0d)`;
+		pointer.style.background = `radial-gradient(circle 200px at ${gradientCenterX}% ${gradientCenterY}%, transparent 10%, #0d0d0d)`;
 	});
 
 	const animate = () => {

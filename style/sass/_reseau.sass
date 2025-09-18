@@ -60,21 +60,19 @@
     border-colo: 2px solid $redAlert
 
 .double_verification
-    position: absolute
-    bottom: -400px
-    left: 0
-    width: 100%
-    background-color: #4CAF50
-    color: white
-    display: hidden
+    visibility: hidden
+    margin-top: -900px
+    margin-bottom: 20px
+    opacity: 0
     justify-content: center
     align-items: center
     font-size: 1.5em
-    transition: bottom 1s ease-in-out
-    z-index: 1000
+    transition: opacity 1s ease-in-out
+    z-index: -10
 
 .visible 
-    display: inline
-    bottom: 0
+    visibility: visible
+    opacity: 1
+    margin-top: 0px
 
         

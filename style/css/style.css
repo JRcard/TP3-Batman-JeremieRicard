@@ -590,6 +590,11 @@ a:active {
   transition: opacity 1s ease-in-out;
   z-index: -10;
 }
+@media (max-width: 550px) {
+  .double_verification__titre {
+    font-size: 3rem;
+  }
+}
 
 .visible {
   visibility: visible;

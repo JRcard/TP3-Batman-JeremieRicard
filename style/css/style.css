@@ -176,6 +176,11 @@ a:active {
     display: none;
   }
 }
+@media (max-width: 550px) {
+  .presentation__titre {
+    font-size: 3rem;
+  }
+}
 .presentation__texte--emphase {
   font-family: "roboto-italic";
   color: #00cdcd;
@@ -187,9 +192,29 @@ a:active {
   font: 2rem "roboto";
   color: #00fcfc;
 }
+@media (max-width: 1024px) {
+  .identite__champ {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 880px) {
+  .identite__champ {
+    font-size: 1.6rem;
+  }
+}
 .identite__texte {
   font: 1.5rem "roboto";
   color: #a9a6a6;
+}
+@media (max-width: 1024px) {
+  .identite__texte {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 880) {
+  .identite__texte {
+    font-size: 1rem;
+  }
 }
 
 .journal__card {

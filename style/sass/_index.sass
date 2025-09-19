@@ -4,6 +4,9 @@
 @use 'mixins' as *
 
 .presentation
+    &__titre
+        @include responsive(550px)
+            font-size: 3rem
     &__texte
         &--emphase
             font-family: $robotoMono-italic
@@ -12,9 +15,18 @@
 .identite
     &__champ
         @include text_font(2rem, $cyan )
+        @include responsive(1024px)
+            font-size: 1.8rem
+        @include responsive(880px)
+            font-size: 1.6rem
         
     &__texte
         @include text_font(1.5rem, $brightGray)
+        @include responsive(1024px)
+            font-size: 1.3rem
+        @include responsive(880)
+            font-size: 1rem
+
 
 .journal
     &__card

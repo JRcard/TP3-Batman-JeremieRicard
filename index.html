@@ -39,7 +39,7 @@
     <main id="main">
         <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
         <section class="presentation mb-15">
-            <h2 class="text-right mb-10 mt-20">Entrée #001 - Présentation</h2>
+            <h2 class="presentation__titre text-right mb-10 mt-20">Entrée #001 - Présentation</h2>
             <div class="w-[90%] xxl:w-[85%] mx-auto grid grid-cols-12 mt-25 mb-[100px] lg:my-[200px]">
                 <div class="col-span-12 lg:col-span-6 flex flex-col justify-center">
                     <p class="presentation__texte">Je suis né dans le chaos.</p>
@@ -81,10 +81,11 @@
         </section>
         <section class="identite mb-15">
             <h2 class="identite__titre text-right mb-10 mt-20">Entrée #002 - Identité masqué</h2>
-            <div class="identite__content grid grid-cols-12 py-15">
-                <div class="col-span-7 flex flex-col justify-center">
-                    <div class="identite__list flex items-baseline pb-5">
-                        <h3 class="identite__champ pr-3">Alias détectés :</h3>
+            <div
+                class="identite__content grid grid-cols-12 py-15 sm:bg-[url('images/logo-batman-teal.png')] bg-no-repeat bg-center bg-contain">
+                <div class="col-span-12 flex flex-col justify-center">
+                    <div class="identite__list flex flex-col md:flex-row items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Alias détectés</h3>
                         <ul>
                             <li>
                                 <p class="identite__texte">Le Chevalier Noir</p>
@@ -98,39 +99,38 @@
                         </ul>
                     </div>
                     <!-- div model modifié -->
-                    <div class="flex items-baseline pb-5">
-                        <h3 class="identite__champ pr-3">Nom réel :</h3>
+                    <div class="flex flex-col md:flex-row items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Nom réel</h3>
                         <p class="identite__texte">█████ ████████</p>
                     </div>
-                    <div class="flex items-baseline pb-5">
-                        <h3 class="identite__champ pr-3">Statut :</h3>
+                    <div class="flex flex-col md:flex-row items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Statut</h3>
                         <p class="identite__texte">Codé – Niveau d’accès requis : 7</p>
                     </div>
-                    <div class="flex items-baseline pb-5">
+                    <div class="flex flex-col md:flex-row items-baseline pb-5">
                         <h3 class="identite__champ pr-3">Empreinte ADN :</h3>
                         <p class="identite__texte">87% match avec base WayneTech</p>
                     </div>
-                    <div class="flex items-baseline pb-5">
-                        <h3 class="identite__champ pr-3">Rétine :</h3>
+                    <div class="flex flex-col md:flex-row items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Rétine</h3>
                         <p class="identite__texte">Analyse en cours...</p>
                     </div>
-                    <div class="flex items-baseline pb-5">
-                        <h3 class="identite__champ pr-3">Coordonnées :</h3>
+                    <div class="flex flex-col md:flex-row items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Coordonnées</h3>
                         <p class="identite__texte">Brouillage actif</p>
                     </div>
-                    <div class="flex items-baseline pb-5">
-                        <h3 class="identite__champ pr-3">Note système :</h3>
+                    <div class="flex flex-col md:flex-row items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Note système</h3>
                         <p class="identite__texte">“L’identité de l’opérateur est connue.<br>
                             Mais elle ne doit jamais être confirmée.<br>
                             Le doute est une arme. L’ombre, un refuge.”</p>
                     </div>
-                    <div class="flex items-baseline pb-5">
-                        <h3 class="identite__champ pr-3">Protocole d’accès :</h3>
+                    <div class="flex flex-col md:flex-row items-baseline pb-5">
+                        <h3 class="identite__champ pr-3">Protocole d’accès</h3>
                         <p class="identite__texte">[REDACTED]</p>
                     </div>
                 </div>
-                <div class="col-span-5 flex flex-col justify-center" data-aos="fade-in" data-aos-duration="1000"
-                    data-aos-easing="ease-in">
+                <div class="col-span-12 mt-5 sm:hidden">
                     <img src="images/logo-batman-teal.png" alt="Logo de batman">
                 </div>
             </div>
@@ -139,7 +139,7 @@
         <section class="mb-15">
             <h2 class="text-right  mb-10 mt-20">Entrée #003 - Journal audio</h2>
             <div class="grid grid-cols-12 gap-8 py-15">
-                <div class="journal__card col-span-4">
+                <div class="journal__card col-span-12 md:col-span-6 lg:col-span-4">
                     <h3 class="py-3">Rapport #003-A</h3>
                     <h4 class="pb-3">La nuit du Joker</h4>
                     <div class="py-5">
@@ -148,7 +148,7 @@
                         <i class='bx bx-play bouton--audio' id="play-003-A" tabindex="0"></i>
                     </div>
                 </div>
-                <div class="journal__card col-span-4">
+                <div class="journal__card col-span-12 md:col-span-6 lg:col-span-4">
                     <h3 class="py-3">Rapport #003-B</h3>
                     <h4 class="pb-3">Le Pacte de Gordon</h4>
                     <div class="py-5">
@@ -157,7 +157,7 @@
                         <i class='bx bx-play bouton--audio' id="play-003-B" tabindex="0"></i>
                     </div>
                 </div>
-                <div class="journal__card col-span-4">
+                <div class="journal__card col-span-12 md:col-span-6 md:col-start-4 lg:col-span-4">
 
                     <h3 class="py-3">Rapport #003-C</h3>
                     <h4 class="pb-3">L’Opération Silence</h4>
@@ -175,12 +175,14 @@
 
     </main>
     <div class="divider"></div>
-    <footer class="grid grid-cols-12 mt-5 mb-15">
-        <div class="col-span-2 col-start-6">
-            <p class="text-center">copyrigth @ 2025</p>
-        </div>
-        <div class="col-span-1 col-start-12">
-            <a class="text-right" tabindex="0">mode furtif</a>
+    <footer class="mx-auto grid grid-cols-12 mt-5 mb-15">
+        <div class="col-span-12 flex justify-between">
+            <div>
+                <p>copyrigth @ 2025</p>
+            </div>
+            <div class="text-right">
+                <a class="text-right" tabindex="0">mode furtif</a>
+            </div>
         </div>
     </footer>
     <!-- <div class="pointer" aria-hidden="true"></div> -->

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="description" content=".... erreur système!">
@@ -15,22 +16,50 @@
 <body class="max-w-[1900px] w-[90%] mx-auto bg-[url('images/joker.jpg')]">
     <div class="batPointer" aria-hidden="true"></div>
     <header>
-        <div>
+        <div class="min-h-[150px]">
             <nav class="menu grid grid-cols-12 py-10" aria-label="Menu principal">
-                <h1><img class="menu__logo col-span-1 w-[55%]" src="images/batlogo.png"
-                        alt="Logo simple - masque de batamn"></h1>
-                <button class="bouton col-span-2 col-start-7 text-center my-auto" id="butInstall" aria-label="Install"
-                    hidden>Bat-Install-PWA</button>
-                <ul class="menu__list flex justify-end items-center col-span-4 col-start-9">
+                <a href="/" class="header__logo min-w-[75px]" title="Retour à l'accueil"><img
+                        class="menu__logo col-span-1" src="images/batlogo.png" alt="Logo simple - masque de batamn"></a>
+                <ul class="menu__list flex justify-end items-center col-span-4 col-end-13 hidden lg:block">
 
-                    <li class="menu__item text-right"><a class="" href="index.html" aria-current="page">Dossier
+                    <li class="menu__item text-right pb-5">
+                        <a href="index.html" aria-current="page">Dossier
                             personnel</a>
                     </li>
                     <li class="menu__item text-right"><a href="arsenal.html">Arsenal technologique</a></li>
-                    <li class="menu__item text-right"><a href="reseau&allies.html">Réseaux & Alliés</a></li>
+                    <li class="menu__item text-right pt-5"><a href="reseau&allies.html">Réseau & Alliés</a></li>
+                    <li class="menu__item text-right pt-5"><button
+                            class="bouton col-span-2 col-start-6 text-center my-auto" id="butInstall"
+                            aria-label="Install" hidden>Bat-Install-PWA</button></li>
                 </ul>
+                <div class="menu__mobile lg:hidden col-span-2 col-end-13 place-content-center">
+                    <el-dropdown class="col-span-2 col-end-13 place-content-center">
+                        <button class="inline-flex w-full justify-end text-4xl text-[#007e80]">
+                            <i class='bx bx-cog'></i>
+                        </button>
+
+                        <el-menu anchor="bottom end" popover
+                            class="w-56 origin-top-right rounded-md bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                            <div class="py-1">
+                                <a href="/"
+                                    class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Dossier
+                                    personnel</a>
+                                <a href="arsenal.html"
+                                    class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Arsenal
+                                    technologique</a>
+                                <a href="reseau&allies.html"
+                                    class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Réseau
+                                    & alliés</a>
+                                <button class="bouton col-span-2 col-start-6 text-center my-auto" id="butInstall"
+                                    aria-label="Install" hidden>Bat-Install-PWA</button>
+                            </div>
+                        </el-menu>
+                    </el-dropdown>
+
+                </div>
             </nav>
         </div>
+
     </header>
     <main>
         <img src="images/joker.jpg" alt="joker" />
@@ -39,6 +68,7 @@
     <footer>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <script src="script/mouse.js"></script>
 </body>
 

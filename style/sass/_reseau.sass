@@ -79,6 +79,12 @@
     font-size: 1.5em
     transition: opacity 1s ease-in-out
     z-index: -10
+    @include responsive(1024px)
+        margin-top: -1000px
+    @include responsive(800px)
+        margin-top: -1100px
+    @include responsive(640px)
+        margin-top: -1500px
     &__titre
         @include responsive(550px)
             font-size: 3rem

@@ -20,17 +20,43 @@
     <header>
         <div>
             <nav class="menu grid grid-cols-12 py-10" aria-label="Menu principal">
-                <a href="/" class="header__logo" title="Retour à l'accueil"><img class="menu__logo col-span-1 w-[55%]"
-                        src="images/batlogo.png" alt="Logo simple - masque de batamn"></a>
-                <ul class="menu__list flex justify-end items-center col-span-4 col-start-9">
-                    <li class="menu__item text-right"><a href="index.html">Dossier personnel</a>
+                <a href="/" class="header__logo min-w-[75px]" title="Retour à l'accueil"><img
+                        class="menu__logo col-span-1" src="images/batlogo.png" alt="Logo simple - masque de batamn"></a>
+                <ul class="menu__list flex justify-end items-center col-span-4 col-end-13 hidden lg:block">
+
+                    <li class="menu__item text-right pb-5"><a href="index.html" aria-current="page">Dossier
+                            personnel</a>
                     </li>
-                    <li class="menu__item text-right"><a href="arsenal.html">Arsenal
-                            technologique</a></li>
-                    <li class="menu__item text-right"><a class="current" href="reseau&allies.html"
-                            aria-current="page">Réseau &
+                    <li class="menu__item text-right"><a href="arsenal.html">Arsenal technologique</a></li>
+                    <li class="menu__item text-right pt-5 current"><a class="current" href="reseau&allies.html">Réseau &
                             Alliés</a></li>
+
                 </ul>
+                <div class="menu__mobile lg:hidden col-span-2 col-end-13 place-content-center">
+                    <el-dropdown class="col-span-2 col-end-13 place-content-center">
+                        <button class="inline-flex w-full justify-end text-4xl text-[#007e80]">
+                            <i class='bx bx-cog'></i>
+                        </button>
+
+                        <el-menu anchor="bottom end" popover
+                            class="w-56 origin-top-right rounded-md bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                            <div class="py-1">
+                                <a href="/"
+                                    class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Dossier
+                                    personnel</a>
+                                <a href="arsenal.html"
+                                    class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Arsenal
+                                    technologique</a>
+                                <a href="reseau&allies.html"
+                                    class="current block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Réseau
+                                    & alliés</a>
+                                <button class="bouton col-span-2 col-start-6 text-center my-auto" id="butInstall"
+                                    aria-label="Install" hidden>Bat-Install-PWA</button>
+                            </div>
+                        </el-menu>
+                    </el-dropdown>
+
+                </div>
             </nav>
         </div>
     </header>
@@ -344,10 +370,10 @@
                         <label class="text-[#0d0d0d]" for="code_2">#2</label>
                         <label class="text-[#0d0d0d]" for="code_3">#3</label>
                     </div>
-                    <div class="code-secret__inputDiv col-span-12 grid grid-cols-12">
-                        <input class="code-secret__input col-span-4 py-10 mr-5" type="number" id="code_1" name="1"
+                    <div class="code-secret__inputDiv col-span-12 grid grid-cols-12 gap-2">
+                        <input class="code-secret__input col-span-4 py-10 " type="number" id="code_1" name="1"
                             placeholder="00">
-                        <input class="code-secret__input col-span-4 mr-5" type="number" id="code_2" name="2"
+                        <input class="code-secret__input col-span-4" type="number" id="code_2" name="2"
                             placeholder="00">
                         <input class="code-secret__input col-span-4" type="number" id="code_3" name="3"
                             placeholder="00">
@@ -472,6 +498,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <script src="script/validation.js"></script>
 </body>
 

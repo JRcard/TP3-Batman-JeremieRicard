@@ -1,5 +1,6 @@
 let deferredInstallPrompt = null;
 const installButton = document.getElementById("butInstall");
+const installBtnMobile = document.getElementById("butIntallMobil");
 installButton.addEventListener("click", installPWA);
 
 window.addEventListener("beforeinstallprompt", saveBeforeInstallPromptEvent);
@@ -9,6 +10,7 @@ function saveBeforeInstallPromptEvent(evt) {
 	deferredInstallPrompt = evt;
 	evt.preventDefault();
 	installButton.removeAttribute("hidden");
+	installBtnMobile.removeAttribute("hidden");
 	console.log("a la fin du saveBeforeInsatallPromptEvent()");
 }
 

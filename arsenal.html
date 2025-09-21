@@ -50,8 +50,6 @@
                                 <a href="reseau&allies.html"
                                     class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Réseau
                                     & alliés</a>
-                                <button class="bouton col-span-2 col-start-6 text-center my-auto" id="butInstall"
-                                    aria-label="Install" hidden>Bat-Install-PWA</button>
                             </div>
                         </el-menu>
                     </el-dropdown>
@@ -364,7 +362,7 @@
             <!-- MODALES - dialogBoxes -->
             <!--tailwind component: https://tailwindcss.com/plus/ui-blocks/application-ui/overlays/modal-dialogs-->
             <el-dialog class="col-span-1">
-                <dialog id="dialog-batmobil" aria-labelledby="dialog-title"
+                <dialog id="dialog-batmobil"
                     class=" inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                     <el-dialog-backdrop
                         class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -405,12 +403,13 @@
                             <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                                 <button type="button" command="close" commandfor="dialog-batmobil"
                                     class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                            </div>
                         </el-dialog-panel>
                     </div>
                 </dialog>
             </el-dialog>
             <el-dialog class="col-span-1">
-                <dialog id="dialog-batwing" aria-labelledby="dialog-title"
+                <dialog id="dialog-batwing"
                     class="fixed inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                     <el-dialog-backdrop
                         class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -451,12 +450,13 @@
                             <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                                 <button type="button" command="close" commandfor="dialog-batwing"
                                     class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                            </div>
                         </el-dialog-panel>
                     </div>
                 </dialog>
             </el-dialog>
             <el-dialog class="col-span-1">
-                <dialog id="dialog-tumbler" aria-labelledby="dialog-title"
+                <dialog id="dialog-tumbler"
                     class="fixed inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                     <el-dialog-backdrop
                         class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -497,12 +497,13 @@
                             <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                                 <button type="button" command="close" commandfor="dialog-tumbler"
                                     class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                            </div>
                         </el-dialog-panel>
                     </div>
                 </dialog>
             </el-dialog>
             <el-dialog class="col-span-1">
-                <dialog id="dialog-batcycle" aria-labelledby="dialog-title"
+                <dialog id="dialog-batcycle"
                     class="fixed inset-0 size-auto mb-30 max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                     <el-dialog-backdrop
                         class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -542,6 +543,7 @@
                             <div class="bg-gray-700/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                                 <button type="button" command="close" commandfor="dialog-batcycle"
                                     class="bouton inline-flex sm:ml-3 sm:w-auto">Fermer</button>
+                            </div>
                         </el-dialog-panel>
                     </div>
                 </dialog>
@@ -656,7 +658,7 @@
                 <p>copyrigth @ 2025</p>
             </div>
             <div class="text-right">
-                <a class="text-right" tabindex="0">mode furtif</a>
+                <a id="toggleFurtif" class="text-right" tabindex="0">mode furtif</a>
             </div>
         </div>
     </footer>
@@ -666,8 +668,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script/carousel.js"></script>
     <script src="script/tabs.js"></script>
-    <script src="script/mouse.js"></script>
-    </script>
+    <script src="script/furtif.js"></script>
 </body>
 
 </html>

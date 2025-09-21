@@ -17,6 +17,8 @@ const codePostalInput = document.getElementById("codePostal");
 const submitButton = document.querySelector(".form__btn");
 let agentCount = 0;
 let protocoleCount = 0;
+let nameCount = 0;
+let aliasCount = 0;
 
 const validateAccess = () => {
 	const code_1_value = parseInt(code_1_input.value).toString(2);
@@ -46,12 +48,34 @@ const validateForm = () => {
 	const protocoleValue = protocoleInput.value.trim();
 	const codePostalValue = codePostalInput.value.trim().toUpperCase();
 
-	if (!nameValidator(nomReelValue, nomReelInput)) {
-		noError = false;
-	}
 	if (!nameValidator(aliasValue, aliasInput)) {
 		noError = false;
-	}
+	} else if (!verifyAlias(aliasValue)) {
+		if (aliasCount < 2) {
+			aliasCount++;
+			setError(aliasInput, `Accès refusé: il te reste ${3 - aliasCount} chance(s)`);
+			noError = false;
+		} else {
+			setError(aliasInput, "Indice: dossier personnel: Entrée #002");
+			aliasCount = 0;
+			noError = false;
+		}
+	} else setSuccess(nomReelInput);
+
+	if (!nameValidator(nomReelValue, nomReelInput)) {
+		noError = false;
+	} else if (!verifyName(nomReelValue)) {
+		if (nameCount < 2) {
+			nameCount++;
+			setError(nomReelInput, `Accès refusé: il te reste ${3 - nameCount} chance(s)`);
+			noError = false;
+		} else {
+			setError(nomReelInput, "Indice: dossier personnel: Entrée #002");
+			nameCount = 0;
+			noError = false;
+		}
+	} else setSuccess(nomReelInput);
+
 	if (emailValue === "") {
 		setError(emailInput, "Ce champ est obligatoire");
 		noError = false;
@@ -84,20 +108,19 @@ const validateForm = () => {
 			noError = false;
 		}
 	} else setSuccess(agentAutoriseInput);
+
 	if (telValue === "") {
 		setError(telInput, "Ce champ est obligatoire");
 		noError = false;
 	} else if (!verifyTelFormat(telValue)) {
 		setError(telInput, "Le format n'est pas correspondant à (###) ###-####");
 		noError = false;
-	} else {
-		setSuccess(telInput);
-	}
+	} else setSuccess(telInput);
 
 	if (protocoleValue === "") {
 		setError(protocoleInput, "Ce champ est obligatoire");
 		noError = false;
-	} else if (!verifyProtocole(protocoleValue)) {
+	} else if (!verifyProtocole(protocoleValue.toUpperCase())) {
 		if (protocoleCount < 2) {
 			protocoleCount++;
 			setError(protocoleInput, `Accès refusé: il te reste ${3 - protocoleCount} chance(s)`);
@@ -169,7 +192,12 @@ const verifyCodePostal = (codePostal) => {
 	const re = /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVXY][ ]?\d[ABCEGHJKLMNPRSTVXY]\d$/i;
 	return re.test(codePostal);
 };
-
+const verifyName = (nom) => {
+	return btoa(nom) === "QnJ1Y2UgV2F5bmU=";
+};
+const verifyAlias = (alias) => {
+	return btoa(alias) === "QmF0bWFu";
+};
 const nameValidator = (nom, input) => {
 	if (nom === "") {
 		setError(input, "Ce champ est obligatoire");
@@ -208,6 +236,6 @@ code_secret.addEventListener("submit", (e) => {
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	if (validateForm()) {
-		window.location.href = "https://portfolio.jeremiericard.ca";
+		window.location.href = "confirmation.html";
 	}
 });

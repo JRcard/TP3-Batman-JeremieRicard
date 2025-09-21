@@ -104,9 +104,9 @@ a
     transform: translate3d(var(--mouseX, 1900px), var(--mouseY, 1200px), 0) translate(-105%, -75%)
 
     transition: 0.15s ease-out
-    transition-property: transform width border background-color 
+    transition-property: transform, width, border, background-color 
 
-    /* https://www.youtube.com/watch?v=r1nWWrsVqmI&ab_channel=LiveBlogger */
+    
 .pointer
     position: fixed
     inset: 0
@@ -123,3 +123,19 @@ a
     .pointer,
     #coordinates
         display: none
+
+.furtif
+    *
+        color: $purWhite !important
+        background-color: $deepBlack !important
+        border: none !important
+        z-index: 3
+    img, iframe 
+        filter: grayscale(100%) brightness(0.6) 
+    a
+        color: $purWhite !important
+        text-decoration: underline
+    button, input, select
+        background: #111 !important
+        color: $darkSlateGray !important
+        border: 1px solid $purWhite

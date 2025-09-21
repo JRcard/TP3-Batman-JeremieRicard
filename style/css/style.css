@@ -154,8 +154,7 @@ a:active {
   pointer-events: none;
   transform: translate3d(var(--mouseX, 1900px), var(--mouseY, 1200px), 0) translate(-105%, -75%);
   transition: 0.15s ease-out;
-  transition-property: transform width border background-color;
-  /* https://www.youtube.com/watch?v=r1nWWrsVqmI&ab_channel=LiveBlogger */
+  transition-property: transform, width, border, background-color;
 }
 
 .pointer {
@@ -177,6 +176,25 @@ a:active {
     display: none;
   }
 }
+.furtif * {
+  color: #fafafa !important;
+  background-color: #030303 !important;
+  border: none !important;
+  z-index: 3;
+}
+.furtif img, .furtif iframe {
+  filter: grayscale(100%) brightness(0.6);
+}
+.furtif a {
+  color: #fafafa !important;
+  text-decoration: underline;
+}
+.furtif button, .furtif input, .furtif select {
+  background: #111 !important;
+  color: #303030 !important;
+  border: 1px solid #fafafa;
+}
+
 @media (max-width: 550px) {
   .presentation__titre {
     font-size: 3rem;
@@ -212,7 +230,7 @@ a:active {
     font-size: 1.3rem;
   }
 }
-@media (max-width: 880) {
+@media (max-width: 880px) {
   .identite__texte {
     font-size: 1rem;
   }
@@ -511,7 +529,6 @@ a:active {
   border: 1px solid #00ffff;
   display: inline-block;
   cursor: pointer;
-  transition: background-color color 0.3s ease;
 }
 .terminal-button:hover {
   animation: terminal-glitch 0.4s;

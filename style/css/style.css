@@ -146,7 +146,7 @@ a:active {
   width: 210px;
   height: 210px;
   aspect-ratio: 1;
-  background: url("https://www.freepnglogos.com/uploads/black-logo-batman-png-1.png") no-repeat rgba(253, 227, 17, 0.12);
+  background: url("../../images/batsignal.png") no-repeat rgba(253, 227, 17, 0.12);
   background-size: 100%;
   background-position: 50% 50%;
   border-radius: 100%;

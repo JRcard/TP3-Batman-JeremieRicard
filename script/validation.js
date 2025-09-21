@@ -56,7 +56,7 @@ const validateForm = () => {
 			setError(aliasInput, `Accès refusé: il te reste ${3 - aliasCount} chance(s)`);
 			noError = false;
 		} else {
-			setError(aliasInput, "Indice: dossier personnel: Entrée #002");
+			setError(aliasInput, "Indice: Arsenal technologique -> mode furtif: Entrée #006");
 			aliasCount = 0;
 			noError = false;
 		}

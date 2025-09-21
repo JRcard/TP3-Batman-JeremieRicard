@@ -13,24 +13,20 @@
 </head>
 
 <body>
-    <div class="batPointer" aria-hidden="true"></div>
     <header>
-
     </header>
     <main id="main">
         <a class="screen-reader-text" href="#main">Aller au contenu principal</a>
-
         <div class="offline__container">
-            <div class="offline__img"></div> <!-- image du Joker en fond -->
-            <div class="offline__pointer" aria-hidden="true"></div> <!-- spot qui suit la souris -->
-            <div class="offline__title">Offline… Tout s’effondre. Et j’adore.</div> <!-- texte toujours visible -->
+            <div class="offline__img"></div>
+
+            <div class="offline__title">Offline… Tout s’effondre. Et j’adore.</div>
         </div>
     </main>
 
     <footer>
 
     </footer>
-    <script src="script/offline_mouse.js"></script>
     <script>
         // Register service worker.
         if ("serviceWorker" in navigator) {

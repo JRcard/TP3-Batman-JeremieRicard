@@ -21,17 +21,6 @@ stopBtn.onclick = function () {
 		icon.classList.replace("bx-play", "bx-stop");
 	}
 };
-/* export const stopBtnClick = () => {
-	isPaused = !isPaused;
-	const icon = document.querySelector(".stop i");
-	icon.classList.replace("bx-stop", "bx-play");
-	showSlider("stop");
-
-	if (!isPaused) {
-		showSlider("next");
-		icon.classList.replace("bx-play", "bx-stop");
-	}
-}; */
 
 nextBtn.onclick = function () {
 	showSlider("next");

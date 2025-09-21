@@ -1,7 +1,7 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v25";
+const CACHE_NAME = "static-cache-v26";
 //Add list of files to cache here.
-const FILES_TO_CACHE = ["indexOffline.html", "manifest.json", "style/css/style.css", "images/favicon.png", "images/offline_joker.png", "script/offline_mouse.js"];
+const FILES_TO_CACHE = ["indexOffline.html", "manifest.json", "style/css/style.css", "images/favicon.png", "images/offline_joker.jpg", "script/offline_mouse.js"];
 
 self.addEventListener("install", (evt) => {
 	console.log("[ServiceWorker] Install");

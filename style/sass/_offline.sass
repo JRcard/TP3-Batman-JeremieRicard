@@ -1,0 +1,49 @@
+@use 'colors' as *
+@use 'typographie' as *
+@use 'general' as *
+@use 'mixins' as *
+
+.offline
+    &__container
+        position: relative
+        width: 100vw
+        height: 100vh
+        overflow: hidden
+
+    &__img
+        position: absolute
+        inset: 0
+        background: url("../../images/offline_joker.jpg") center/cover no-repeat
+        z-index: 1
+    &__pointer
+        position: fixed
+        inset: 0
+        background: radial-gradient(circle 200px at var(--x, 50%) var(--y, 50%), transparent 10%, #000 90%)
+        pointer-events: none
+        z-index: 2
+    &__title
+        @include header_font(3rem)
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: $redAlert
+        z-index: 3
+        animation: degoulinement 2s infinite
+
+@keyframes degoulinement
+  0%
+    text-shadow: 2px 2px $redAlert, -2px -2px $gray
+
+  15%
+    text-shadow: -3px 3px $cyan, 3px -3px $brightGray
+
+  60%
+    text-shadow: 3px 0 $brightGray, -3px 0 $cyan
+
+  90%
+    text-shadow: 0 3px $gray, 0 -3px $teal
+
+  100%
+    text-shadow: 2px -2px $brightGray, -2px 2px $redAlert
+

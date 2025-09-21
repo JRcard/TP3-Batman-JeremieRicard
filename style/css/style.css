@@ -639,4 +639,54 @@ a:active {
   visibility: visible;
   opacity: 1;
   margin-top: 0px;
+}
+
+.offline__container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.offline__img {
+  position: absolute;
+  inset: 0;
+  background: url("../../images/offline_joker.jpg") center/cover no-repeat;
+  z-index: 1;
+}
+.offline__pointer {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle 200px at var(--x, 50%) var(--y, 50%), transparent 10%, #000 90%);
+  pointer-events: none;
+  z-index: 2;
+}
+.offline__title {
+  font: 3rem "orbitron";
+  color: #00cdcd;
+  line-height: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff3b3b;
+  z-index: 3;
+  animation: degoulinement 2s infinite;
+}
+
+@keyframes degoulinement {
+  0% {
+    text-shadow: 2px 2px #ff3b3b, -2px -2px #7a7a7a;
+  }
+  15% {
+    text-shadow: -3px 3px #00fcfc, 3px -3px #a9a6a6;
+  }
+  60% {
+    text-shadow: 3px 0 #a9a6a6, -3px 0 #00fcfc;
+  }
+  90% {
+    text-shadow: 0 3px #7a7a7a, 0 -3px #007e80;
+  }
+  100% {
+    text-shadow: 2px -2px #a9a6a6, -2px 2px #ff3b3b;
+  }
 }/*# sourceMappingURL=style.css.map */

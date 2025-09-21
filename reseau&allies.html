@@ -28,7 +28,7 @@
                             personnel</a>
                     </li>
                     <li class="menu__item text-right"><a href="arsenal.html">Arsenal technologique</a></li>
-                    <li class="menu__item text-right pt-5 current"><a class="current" href="reseau&allies.html">Réseau &
+                    <li class="menu__item text-right pt-5"><a class="current" href="reseau&allies.html">Réseau &
                             Alliés</a></li>
 
                 </ul>
@@ -347,7 +347,8 @@
 
                 </div>
                 <div class="operations__carte my-auto col-span-12 lg:col-span-6">
-                    <iframe src="https://mapgenie.io/gotham-knights/maps/gotham-city?embed=light"
+                    <iframe title="Carte intéractive de Gotham City"
+                        src="https://mapgenie.io/gotham-knights/maps/gotham-city?embed=light"
                         class="h-[675px] w-full"></iframe>
                 </div>
             </div>
@@ -364,19 +365,14 @@
             </div>
             <div class="max-w-[1900px] w-[90%] mx-auto">
                 <form class="form__code-secret grid grid-cols-12 mb-20 mx-2" novalidate>
-                    <h3 class="col-span-12 mb-5 text-center">Code d'accès secret</h3>
-                    <div class="col-span-12">
-                        <label class="text-[#0d0d0d]" for="code_1">#1</label>
-                        <label class="text-[#0d0d0d]" for="code_2">#2</label>
-                        <label class="text-[#0d0d0d]" for="code_3">#3</label>
-                    </div>
+                    <h3 class="col-span-12 mb-10 text-center">Code d'accès secret</h3>
                     <div class="code-secret__inputDiv col-span-12 grid grid-cols-12 gap-2">
                         <input class="code-secret__input col-span-4 py-10 " type="number" id="code_1" name="1"
-                            placeholder="00">
-                        <input class="code-secret__input col-span-4" type="number" id="code_2" name="2"
-                            placeholder="00">
-                        <input class="code-secret__input col-span-4" type="number" id="code_3" name="3"
-                            placeholder="00">
+                            placeholder="00" aria-label="numéro 1">
+                        <input class="code-secret__input col-span-4" type="number" id="code_2" name="2" placeholder="00"
+                            aria-label="numéro 2">
+                        <input class="code-secret__input col-span-4" type="number" id="code_3" name="3" placeholder="00"
+                            aria-label="numéro 3">
                     </div>
                     <div class="form__error text-center col-span-12"></div>
 

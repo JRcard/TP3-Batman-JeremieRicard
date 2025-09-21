@@ -13,7 +13,7 @@
   font-style: italic;
 }
 body {
-  background-color: #0d0d0d;
+  background-color: #030303;
 }
 
 h1 {
@@ -43,12 +43,12 @@ h4 {
 
 p {
   font: 1.2rem "roboto";
-  color: #a9a6a6;
+  color: #dbdbdb;
 }
 
 a {
   font: 1.2rem "roboto";
-  color: #a9a6a6;
+  color: #dbdbdb;
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -80,7 +80,7 @@ a:active {
 .reseau__sousTitre, .arsenal__sousTitre,
 .vehicle__sousTitre {
   font: 1.4rem "roboto";
-  color: #a9a6a6;
+  color: #dbdbdb;
   color: #00cdcd;
   text-shadow: 0 0 5px #00fcfc;
   transition: all 0.3s ease-out;
@@ -104,7 +104,8 @@ a:active {
 }
 
 .current {
-  color: #007e80;
+  color: #00fcfc;
+  border-bottom: 2px solid #00fcfc;
 }
 
 .divider {
@@ -160,7 +161,7 @@ a:active {
 .pointer {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle 200px at 95% 100%, transparent 10%, #0d0d0d);
+  background: radial-gradient(circle 200px at 95% 100%, transparent 10%, #030303);
   pointer-events: none;
 }
 
@@ -204,7 +205,7 @@ a:active {
 }
 .identite__texte {
   font: 1.5rem "roboto";
-  color: #a9a6a6;
+  color: #dbdbdb;
 }
 @media (max-width: 1024px) {
   .identite__texte {
@@ -225,7 +226,7 @@ a:active {
 
 .audio-player__time {
   font: 1.2rem "roboto";
-  color: #a9a6a6;
+  color: #dbdbdb;
   font-style: italic;
 }
 
@@ -287,7 +288,7 @@ a:active {
   transform: translateY(-50%);
   width: 55%;
   text-align: left;
-  color: #a9a6a6;
+  color: #dbdbdb;
   display: none;
 }
 @media (max-width: 690px) {
@@ -463,11 +464,11 @@ a:active {
   background-color: #007e80;
 }
 .systemeUI__tabs {
-  background-color: #0d0d0d;
+  background-color: #030303;
 }
 
 .tab__dialog {
-  border-left: 3px solid #0d0d0d;
+  border-left: 3px solid #030303;
   min-height: 130px;
 }
 @media (max-width: 1280px) {
@@ -491,18 +492,18 @@ a:active {
 .dialog__txt {
   font-family: "roboto";
   font-size: 1.3rem;
-  color: #0d0d0d;
+  color: #030303;
   font-weight: 900;
 }
 .dialog__txt--list {
   font-family: "roboto";
   font-size: 1.2rem;
-  color: #0d0d0d;
+  color: #030303;
   font-weight: 900;
 }
 
 .txt--list--title {
-  color: #a9a6a6;
+  color: #dbdbdb;
 }
 
 .terminal-button {
@@ -521,16 +522,16 @@ a:active {
     text-shadow: 3px 4px #7a7a7a, -3px -4px #007e80;
   }
   25% {
-    text-shadow: -3px -4px #00fcfc, 3px 4px #a9a6a6;
+    text-shadow: -3px -4px #00fcfc, 3px 4px #dbdbdb;
   }
   50% {
-    text-shadow: 3px 4px #a9a6a6, -6px 4px #fafafa;
+    text-shadow: 3px 4px #dbdbdb, -6px 4px #fafafa;
   }
   75% {
     text-shadow: -6px -4px #00fcfc, -3px -4px #007e80;
   }
   100% {
-    text-shadow: -3px 0 #7a7a7a, 3px -4px #a9a6a6;
+    text-shadow: -3px 0 #7a7a7a, 3px -4px #dbdbdb;
   }
 }
 .hostiles__titre {
@@ -583,7 +584,7 @@ a:active {
 }
 
 .success {
-  color: #0d0d0d;
+  color: #030303;
   font-weight: 600;
   font-size: 1rem;
   background-color: #fdd700;
@@ -678,15 +679,15 @@ a:active {
     text-shadow: 2px 2px #ff3b3b, -2px -2px #7a7a7a;
   }
   15% {
-    text-shadow: -3px 3px #00fcfc, 3px -3px #a9a6a6;
+    text-shadow: -3px 3px #00fcfc, 3px -3px #dbdbdb;
   }
   60% {
-    text-shadow: 3px 0 #a9a6a6, -3px 0 #00fcfc;
+    text-shadow: 3px 0 #dbdbdb, -3px 0 #00fcfc;
   }
   90% {
     text-shadow: 0 3px #7a7a7a, 0 -3px #007e80;
   }
   100% {
-    text-shadow: 2px -2px #a9a6a6, -2px 2px #ff3b3b;
+    text-shadow: 2px -2px #dbdbdb, -2px 2px #ff3b3b;
   }
 }/*# sourceMappingURL=style.css.map */

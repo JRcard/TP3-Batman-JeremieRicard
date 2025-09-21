@@ -5,8 +5,8 @@ const isTouch = window.matchMedia("(pointer: coarse)").matches;
 const shouldRun = !isReducedMotion && !isTouch;
 
 if (shouldRun) {
-	let mouseX = 0;
-	let mouseY = 0;
+	let mouseX = 1900;
+	let mouseY = 1200;
 
 	const pointer = document.querySelector(".pointer");
 	const batPointer = document.querySelector(".batPointer");

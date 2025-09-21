@@ -151,7 +151,7 @@ a:active {
   background-position: 50% 50%;
   border-radius: 100%;
   pointer-events: none;
-  transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0) translate(-105%, -75%);
+  transform: translate3d(var(--mouseX, 1900px), var(--mouseY, 1200px), 0) translate(-105%, -75%);
   transition: 0.15s ease-out;
   transition-property: transform width border background-color;
   /* https://www.youtube.com/watch?v=r1nWWrsVqmI&ab_channel=LiveBlogger */
@@ -160,7 +160,7 @@ a:active {
 .pointer {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle 200px at 50% 50%, transparent 10%, #0d0d0d);
+  background: radial-gradient(circle 200px at 95% 100%, transparent 10%, #0d0d0d);
   pointer-events: none;
 }
 

@@ -1,5 +1,5 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v33";
+const CACHE_NAME = "static-cache-v34";
 //Add list of files to cache here.
 const FILES_TO_CACHE = ["indexOffline.html", "manifest.json", "style/css/style.css", "images/favicon.png", "images/offline_joker.jpg"];
 
@@ -14,8 +14,6 @@ self.addEventListener("install", (evt) => {
 	);
 	self.skipWaiting();
 });
-
-/*  */
 
 self.addEventListener("activate", (evt) => {
 	console.log("[ServiceWorker] Activate");

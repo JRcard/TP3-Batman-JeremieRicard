@@ -2,6 +2,7 @@ let deferredInstallPrompt = null;
 const installButton = document.getElementById("butInstall");
 const installBtnMobile = document.getElementById("butIntallMobil");
 installButton.addEventListener("click", installPWA);
+installBtnMobile.addEventListener("click", installPWA);
 
 window.addEventListener("beforeinstallprompt", saveBeforeInstallPromptEvent);
 
@@ -35,5 +36,5 @@ window.addEventListener("appinstalled", logAppInstalled);
 
 function logAppInstalled(evt) {
 	// Add code to log the event
-	console.log("Weather App was installed.", evt);
+	console.log("Bat app was installed.", evt);
 }

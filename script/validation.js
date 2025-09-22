@@ -196,7 +196,7 @@ const verifyName = (nom) => {
 	return btoa(nom) === "QnJ1Y2UgV2F5bmU=";
 };
 const verifyAlias = (alias) => {
-	return btoa(alias) === "QmF0bWFu";
+	return btoa(alias) === "Sm9rZXI=";
 };
 const nameValidator = (nom, input) => {
 	if (nom === "") {

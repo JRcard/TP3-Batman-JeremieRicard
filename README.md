@@ -45,7 +45,7 @@ C’est là que les choses se compliquent. Je n’ai pas vérifié ce code au mo
 
 Autre problème : pour que la carte puisse activer le modal, elle devait absolument être placée dans un élément `<button>`. Or, un élément `<div>` ne peut pas être un enfant direct d’un `<button>`. Je suis donc coincé.
 
-J’ai choisi de laisser le tout tel quel. Premièrement, le délai de remise est trop court pour tout corriger. Deuxièmement, je considère que le problème ne vient pas d’un manque de rigueur de ma part, mais d’un manque de prudence dans le composant proposé par Tailwind Plus.
+J’ai choisi de laisser le tout tel quel. Premièrement, je m'en suis rendu compte trop tard pour tout corriger. Deuxièmement, je considère que le problème ne vient pas d’un manque de rigueur de ma part, mais d’un manque de prudence en prenant pour acquis qu'un composant proposé par Tailwind Plus serait sans faille.
 
 C’est là que je commence et termine mon éditorial en disant :  
 **"Vive mes codes !"**
@@ -56,3 +56,5 @@ Le troisième composant est un formulaire de double vérification, pratiquement 
 https://tailwindcss.com/plus/ui-blocks/application-ui/forms/form-layouts
 
 J’ai conservé uniquement les parties qui m’intéressaient. Par curiosité, j’ai passé ce code dans le validateur HTML, et il contient aussi des erreurs. Heureusement, je n’ai pas utilisé les champs concernés par ces erreurs.
+
+Voilà, amuse-toi bien!
